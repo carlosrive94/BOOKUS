@@ -6,8 +6,8 @@ System.register([], function(exports_1, context_1) {
         setters:[],
         execute: function() {
             exports_1("BOOKS", BOOKS = [
-                { "id": 11, "name": "Inferno", "author": "Dan Brown", img: ": ", https: //rincondecriticaliteraria.files.wordpress.com/2013/06/inferno.jpg"},
-                    { "id": 12, "name": "La sombra del viento", "author": "Carlos Ruiz Zafón", "img": "http://image.casadellibro.com/a/l/t0/45/9788408043645.jpg" }, },
+                { "id": 11, "name": "Inferno", "author": "Dan Brown", "img": "https://rincondecriticaliteraria.files.wordpress.com/2013/06/inferno.jpg" },
+                { "id": 12, "name": "La sombra del viento", "author": "Carlos Ruiz Zafón", "img": "http://image.casadellibro.com/a/l/t0/45/9788408043645.jpg" },
                 { "id": 13, "name": "American gods", "author": "Neil Gaiman", "img": "https://upload.wikimedia.org/wikipedia/en/4/49/American_gods.jpg" },
                 { "id": 14, "name": "Necronomicon", "author": "H.P. Lovecraft", "img": "http://image.casadellibro.com/a/l/t0/41/9788490186541.jpg" },
                 { "id": 15, "name": "La torre oscura", "author": "Stephen King", "img": "http://vignette2.wikia.nocookie.net/stephenking/images/f/f2/Torre4.jpg/revision/latest?cb=20081118005300&path-prefix=es" },
