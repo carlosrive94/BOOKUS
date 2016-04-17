@@ -1,0 +1,14 @@
+<div *ngIf="book">
+	<h2>{{book.name}} details</h2>	
+	<div>
+		<img src="{{book.img}}" width="150px" height="225px">
+	</div>
+	<div>
+		<label>Author: </label>{{book.author}}
+	</div>
+	<div>
+		<label>name: </label>
+		<input [(ngModel)]="book.name" placeholder="name" />
+	</div>
+	<button (click)="goBack()">Back</button>
+</div>

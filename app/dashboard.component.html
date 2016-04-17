@@ -1,0 +1,9 @@
+<h3>Top books</h3>
+<div class="grid grid-pad">
+	<div *ngFor="#book of books" (click)="gotoDetail(book)" class="col-1-4">
+		<div class="module book">
+		<img src="{{book.img}}">
+		<h4>{{book.name}}</h4>
+		</div>
+	</div>
+</div>
