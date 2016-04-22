@@ -16,3 +16,9 @@ Bookus is a social network about **books**, you can show to your friends all the
 - *Deployment platform:* Heroku.
 
 - *Data and user management:* Firebase.
+
+----------
+
+To install node_modules
+
+    npm install
