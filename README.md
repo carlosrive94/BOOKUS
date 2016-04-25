@@ -1,4 +1,4 @@
-BOOKUS
+[BOOKUS](https://bookus.herokuapp.com)
 ===================
 
 ### Functional specification
@@ -22,5 +22,10 @@ Bookus is a social network about **books**, you can show to your friends all the
 To install node_modules
 
     npm install
+To run
+
+    npm start
+
+----------
 
 Project of Carlos Rivero and David Guerrero
