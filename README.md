@@ -22,3 +22,5 @@ Bookus is a social network about **books**, you can show to your friends all the
 To install node_modules
 
     npm install
+
+Project of Carlos Rivero and David Guerrero
