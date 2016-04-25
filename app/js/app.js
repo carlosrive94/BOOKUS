@@ -1,7 +1,7 @@
 'use strict';
 
-var express = require('express');
-var bookusApp = express();
+//var express = require('express');
+//var bookusApp = express();
 
 /* App Module */
 
@@ -26,6 +26,6 @@ bookusApp.config(['$routeProvider',
       });
   }]);
 
-bookusApp.listen(3000, function () {
-	console.log('App listening on port 3000');
-});
+//bookusApp.listen(3000, function () {
+//	console.log('App listening on port 3000');
+//});
