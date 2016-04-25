@@ -1,15 +1,19 @@
 {
   "engines": {
-    "node": "0.10.22"
+    "node": "4.4.3"
   },
   "dependencies": {
-    "logfmt": "~0.17.0",
     "express": "~3.4.6",
-	"firebase": "~2.2.1"
+	"firebase": "~2.2.1",
+    "bower": "^1.3.1"
   },
   "name": "angularjs-seed",
   "description": "A starter project for AngularJS",
   "repository": "https://github.com/angular/angular-seed",
+	"scripts": {
+		"start": "node server.js",
+		"postinstall": "bower install"
+	},
   "devDependencies": {
     "phantomjs": "~1.9",
     "karma": "~0.10.4",
