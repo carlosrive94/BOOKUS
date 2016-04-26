@@ -15,10 +15,37 @@ bookusControllers.controller('BookListCtrl', ['$scope', '$firebaseArray',
 
   }]);
   
-bookusControllers.controller('AuthCtrl', ['$scope', '$firebaseAuth' ,
-  function($scope, $firebaseAuth) {
+bookusControllers.controller('AuthCtrl', ['$scope', '$firebaseAuth' , '$firebaseObject' ,
+  function($scope, $firebaseAuth, $firebaseObject) {
 	var ref = new Firebase("https://bookus.firebaseio.com/");
 	var auth = $firebaseAuth(ref);
+	
+	ref.onAuth(function(authData) {
+		if (authData){
+			var isNewUser = ref.child('users/'+authData.uid) === null;
+			if(isNewUser) {
+				ref.child("users").child(authData.uid).set({
+					provider: authData.provider,
+					name: getName(authData)
+				});
+			}
+			$scope.currentUser = $firebaseObject(ref.child('users/'+authData.uid));
+			console.log($scope.currentUser);
+		}
+	});
+	
+	function getName(authData) {
+		switch(authData.provider) {
+			case 'password':
+				return authData.password.email.replace(/@.*/, '');
+			case 'twitter':
+				return authData.twitter.displayName;
+			case 'facebook':
+				return authData.facebook.displayName;
+			case 'google':
+				return authData.google.displayName;
+		}
+	}
 	
 	$scope.loginGoogle = function() {
 		console.log("Login with Google");
@@ -30,7 +57,12 @@ bookusControllers.controller('AuthCtrl', ['$scope', '$firebaseAuth' ,
 			}
 		});
 	};
+	
+	$scope.logout = function(){
+		ref.unauth();
+	}
 }]);
+
 
 bookusControllers.controller('BookDetailCtrl', ['$scope', '$routeParams', '$http',
   function($scope, $routeParams, $http) {

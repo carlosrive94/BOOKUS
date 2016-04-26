@@ -1,6 +1,12 @@
 <div class="container-fluid">
 	<div class "login" ng-controller="AuthCtrl">
-		<a href="#" ng-click="loginGoogle()" class="btn btn-info bt-social" data-provider="google">Google</a>
+		<div ng-show="currentUser">
+			<p> Logged in as {{currentUser.name}} </p>
+			<a href="#" ng-click="logout()" class="btn btn-danger">Log Out</a>
+		</div>
+		<div ng-hide="currentUser">
+			<a href="#" ng-click="loginGoogle()" class="btn btn-info">Google</a>
+		</div>
 	</div>
   <div class="row">
     <div class="col-md-2">
