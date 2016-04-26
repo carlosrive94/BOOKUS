@@ -22,15 +22,13 @@ bookusControllers.controller('AuthCtrl', ['$scope', '$firebaseAuth' , '$firebase
 	
 	ref.onAuth(function(authData) {
 		if (authData){
-			var isNewUser = ref.child('users/'+authData.uid) === null;
-			if(isNewUser) {
+			$scope.currentUser = $firebaseObject(ref.child('users/'+authData.uid));
+			if(angular.isUndefined($scope.currentUser.name)) {
 				ref.child("users").child(authData.uid).set({
 					provider: authData.provider,
 					name: getName(authData)
 				});
 			}
-			$scope.currentUser = $firebaseObject(ref.child('users/'+authData.uid));
-			console.log($scope.currentUser);
 		}
 	});
 	
