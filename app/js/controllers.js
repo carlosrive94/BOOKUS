@@ -76,9 +76,8 @@ bookusControllers.controller('AuthCtrl', ['$scope', '$firebaseAuth' , '$firebase
 }]);
 
 
-bookusControllers.controller('BookDetailCtrl', ['$scope', '$routeParams', '$http',
-  function($scope, $routeParams, $http) {
-    $http.get('books/' + $routeParams.phoneId + '.json').success(function(data) {
-      $scope.book = data;
-    });
-  }]);
+bookusControllers.controller('BookDetailCtrl', ['$scope', '$routeParams', '$firebaseObject',
+  function($scope, $routeParams, $firebaseObject) {
+	var ref = new Firebase("https://bookus.firebaseio.com/books/"+$routeParams.bookId);
+	$scope.book = $firebaseObject(ref);
+}]);
