@@ -8,7 +8,7 @@ bookusControllers.controller('BookListCtrl', ['$scope', '$firebaseArray',
   function($scope, $firebaseArray) {
 	var ref = new Firebase("https://bookus.firebaseio.com/");
 	
-	$scope.books = $firebaseArray(ref);
+	$scope.books = $firebaseArray(ref.child('books'));
 	
 	$scope.orderProp = 'author';
 	
