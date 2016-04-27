@@ -28,6 +28,10 @@
 			<a href="#/books/{{book.id}}" class="thumb"><img ng-src="{{book.imageUrl}}" alt="{{book.name}}" ></a>
 			<a href="#/books/{{book.id}}">{{book.name}}</a>
 			<p>{{book.author}}</p>
+			<div ng-controller="AuthCtrl" ng-show="currentUser">
+				<a href="#" ng-click="addBookRead(book.id)" class="btn btn-info">Read</a>
+				<a href="#" ng-click="addBookWant(book.id)" class="btn btn-info">Want</a>
+			</div>
         </li>
       </ul>
 

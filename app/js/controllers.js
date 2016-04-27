@@ -11,26 +11,26 @@ bookusControllers.controller('BookListCtrl', ['$scope', '$firebaseArray',
 	$scope.books = $firebaseArray(ref.child('books'));
 	
 	$scope.orderProp = 'author';
-	
-
-  }]);
+}]);
   
-bookusControllers.controller('AuthCtrl', ['$scope', '$firebaseAuth' , '$firebaseObject' ,
-  function($scope, $firebaseAuth, $firebaseObject) {
-	var ref = new Firebase("https://bookus.firebaseio.com/");
+bookusControllers.controller('AuthCtrl', ['$scope', '$firebaseAuth' , '$firebaseObject' , '$firebaseArray',
+  function($scope, $firebaseAuth, $firebaseObject, $firebaseArray) {
+	var ref = new Firebase("https://bookus.firebaseio.com/users");
 	var auth = $firebaseAuth(ref);
 	
 	ref.onAuth(function(authData) {
 		if (authData){
-			ref.child('users').child(authData.uid).once('value', function(snapshot){
+			ref.child(authData.uid).once('value', function(snapshot){
 				if (!snapshot.exists()) {
-					ref.child("users").child(authData.uid).set({
+					ref.child(authData.uid).set({
 						provider: authData.provider,
 						name: getName(authData)
 					});
 				}
 			});
-			$scope.currentUser = $firebaseObject(ref.child('users').child(authData.uid));
+			$scope.currentUser = $firebaseObject(ref.child(authData.uid));
+			$scope.booksRead = $firebaseArray(ref.child(authData.uid).child("read"));
+			$scope.booksWanted = $firebaseArray(ref.child(authData.uid).child("want"));
 		}
 	});
 	
@@ -45,7 +45,7 @@ bookusControllers.controller('AuthCtrl', ['$scope', '$firebaseAuth' , '$firebase
 			case 'google':
 				return authData.google.displayName;
 		}
-	}
+	};
 	
 	$scope.loginGoogle = function() {
 		console.log("Login with Google");
@@ -60,7 +60,19 @@ bookusControllers.controller('AuthCtrl', ['$scope', '$firebaseAuth' , '$firebase
 	
 	$scope.logout = function(){
 		ref.unauth();
-	}
+	};
+	
+	$scope.addBookRead = function(idBook){
+		$scope.booksRead.$add({
+			id: idBook
+		});
+	};
+	
+	$scope.addBookWant = function(idBook){
+		$scope.booksWanted.$add({
+			id: idBook
+		});
+	};
 }]);
 
 
