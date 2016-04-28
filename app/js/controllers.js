@@ -53,6 +53,8 @@ bookusControllers.controller('AuthCtrl', ['$scope', '$firebaseAuth' , '$firebase
 		switch(authData.provider) {
 			case 'facebook':
 				return authData.facebook.profileImageURL;
+			case 'twitter':
+				return authData.twitter.profileImageURL;
 			case 'google':
 				return authData.google.profileImageURL;
 		}
@@ -61,6 +63,17 @@ bookusControllers.controller('AuthCtrl', ['$scope', '$firebaseAuth' , '$firebase
 	$scope.loginGoogle = function() {
 		console.log("Login with Google");
 		ref.authWithOAuthPopup("google", function(error, authData) {
+			if (error) {
+				console.log("Login Failed!", error);
+			} else {
+				console.log("Authenticated successfully with payload:", authData);
+			}
+		});
+	};
+
+	$scope.loginTwitter = function() {
+		console.log("Login with Twitter");
+		ref.authWithOAuthPopup("twitter", function(error, authData) {
 			if (error) {
 				console.log("Login Failed!", error);
 			} else {
