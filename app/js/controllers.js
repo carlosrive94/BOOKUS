@@ -99,16 +99,24 @@ bookusControllers.controller('UserCtrl', ['$scope', '$routeParams', '$firebaseOb
   function($scope, $routeParams, $firebaseObject, $firebaseArray) {
 	var ref = new Firebase("https://bookus.firebaseio.com/");
 	$scope.user = $firebaseObject(ref.child("users").child($routeParams.userId));
-	/*TODO -- Get array of books form array of ids of books --
 	
 	var idBooksRead = $firebaseArray(ref.child("users").child($routeParams.userId).child("read"));
-	$scope.booksRead = [];
-	for(var id in idBooksRead){
-		$scope.booksRead.push(ref.child("books").child(id));
-	}
+	idBooksRead.$loaded()
+		.then(function(){
+			$scope.booksRead = [];
+			angular.forEach(idBooksRead, function(obj){
+				var book = $firebaseObject(ref.child("books").child(obj.id));
+				$scope.booksRead.push(book);
+			})
+		});
+	
 	var idBooksWanted = $firebaseArray(ref.child("users").child($routeParams.userId).child("want"));
-	$scope.booksWanted = [];
-	for(var id in idBooksWanted){
-		$scope.booksWanted.push(ref.child("books").child(id));
-	}*/
+	idBooksWanted.$loaded()
+		.then(function(){
+			$scope.booksWanted = [];
+			angular.forEach(idBooksWanted, function(obj){
+				var book = $firebaseObject(ref.child("books").child(obj.id));
+				$scope.booksWanted.push(book);
+			})
+		});
 }]);
