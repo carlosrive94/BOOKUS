@@ -24,7 +24,9 @@ bookusControllers.controller('AuthCtrl', ['$scope', '$firebaseAuth' , '$firebase
 				if (!snapshot.exists()) {
 					ref.child(authData.uid).set({
 						provider: authData.provider,
-						name: getName(authData)
+						uid: authData.uid,
+						name: getName(authData),
+						photo: getPhoto(authData)
 					});
 				}
 			});
@@ -33,7 +35,7 @@ bookusControllers.controller('AuthCtrl', ['$scope', '$firebaseAuth' , '$firebase
 			$scope.booksWanted = $firebaseArray(ref.child(authData.uid).child("want"));
 		}
 	});
-	
+
 	function getName(authData) {
 		switch(authData.provider) {
 			case 'password':
@@ -44,6 +46,15 @@ bookusControllers.controller('AuthCtrl', ['$scope', '$firebaseAuth' , '$firebase
 				return authData.facebook.displayName;
 			case 'google':
 				return authData.google.displayName;
+		}
+	};
+
+	function getPhoto(authData) {
+		switch(authData.provider) {
+			case 'facebook':
+				return authData.facebook.profileImageURL;
+			case 'google':
+				return authData.google.profileImageURL;
 		}
 	};
 	

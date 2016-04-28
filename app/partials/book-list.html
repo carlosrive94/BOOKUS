@@ -2,6 +2,7 @@
 	<div class "login" ng-controller="AuthCtrl">
 		<div ng-show="currentUser">
 			<p> Logged in as {{currentUser.name}} </p>
+			<img src="{{currentUser.photo}}"></img>
 			<a href="#" ng-click="logout()" class="btn btn-danger">Log Out</a>
 		</div>
 		<div ng-hide="currentUser">
