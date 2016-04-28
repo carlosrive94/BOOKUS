@@ -1,6 +1,15 @@
 <h1>{{user.name}}</h1>
 
 <h3> BOOKS READ </h3>
+<div class="col-md-2">
+  Search: <input ng-model="query">
+  Sort by:
+  <select ng-model="orderProp">
+	<option value="name">Alphabetical</option>
+	<option value="age">Newest</option>
+  </select>
+
+</div>
 <ul class="books">
 	<li ng-repeat="book in booksRead | filter:query | orderBy:orderProp" class="thumbnail">
 		<a href="#/books/{{book.id}}" class="thumb"><img ng-src="{{book.imageUrl}}" alt="{{book.name}}" ></a>
@@ -10,6 +19,15 @@
 </ul>
 
 <h3> BOOKS WANTED </h3>
+<div class="col-md-2">
+  Search: <input ng-model="query">
+  Sort by:
+  <select ng-model="orderProp">
+	<option value="name">Alphabetical</option>
+	<option value="age">Newest</option>
+  </select>
+
+</div>
 <ul class="books">
 	<li ng-repeat="book in booksWanted | filter:query | orderBy:orderProp" class="thumbnail">
 		<a href="#/books/{{book.id}}" class="thumb"><img ng-src="{{book.imageUrl}}" alt="{{book.name}}" ></a>

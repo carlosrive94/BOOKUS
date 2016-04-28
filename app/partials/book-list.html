@@ -2,10 +2,14 @@
 	<div class "login" ng-controller="AuthCtrl">
 		<div ng-show="currentUser">
 			<p> Logged in as <a href="#/user/{{currentUser.uid}}">{{currentUser.name}} </a></p>
+			<img src="{{currentUser.photo}}"></img>
 			<a href="#" ng-click="logout()" class="btn btn-danger">Log Out</a>
 		</div>
 		<div ng-hide="currentUser">
 			<a href="#" ng-click="loginGoogle()" class="btn btn-info">Google</a>
+		</div>
+		<div ng-hide="currentUser">
+			<a href="#" ng-click="loginFacebook()" class="btn btn-info">Facebook</a>
 		</div>
 	</div>
   <div class="row">

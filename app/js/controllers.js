@@ -24,7 +24,9 @@ bookusControllers.controller('AuthCtrl', ['$scope', '$firebaseAuth' , '$firebase
 				if (!snapshot.exists()) {
 					ref.child(authData.uid).set({
 						provider: authData.provider,
-						name: getName(authData)
+						uid: authData.uid,
+						name: getName(authData),
+						photo: getPhoto(authData)
 					});
 				}
 			});
@@ -44,6 +46,15 @@ bookusControllers.controller('AuthCtrl', ['$scope', '$firebaseAuth' , '$firebase
 				return authData.facebook.displayName;
 			case 'google':
 				return authData.google.displayName;
+		}
+	};
+
+	function getPhoto(authData) {
+		switch(authData.provider) {
+			case 'facebook':
+				return authData.facebook.profileImageURL;
+			case 'google':
+				return authData.google.profileImageURL;
 		}
 	};
 	
@@ -95,8 +106,18 @@ bookusControllers.controller('BookDetailCtrl', ['$scope', '$routeParams', '$fire
 
 bookusControllers.controller('UserCtrl', ['$scope', '$routeParams', '$firebaseObject', '$firebaseArray',
   function($scope, $routeParams, $firebaseObject, $firebaseArray) {
-	var ref = new Firebase("https://bookus.firebaseio.com/users/"+$routeParams.userId);
-	$scope.user = $firebaseObject(ref);
-	$scope.booksRead = $firebaseArray(ref.child("read"));
-	$scope.booksWanted = $firebaseArray(ref.child("want"));
+	var ref = new Firebase("https://bookus.firebaseio.com/");
+	$scope.user = $firebaseObject(ref.child("users").child($routeParams.userId));
+	/*TODO -- Get array of books form array of ids of books --
+	
+	var idBooksRead = $firebaseArray(ref.child("users").child($routeParams.userId).child("read"));
+	$scope.booksRead = [];
+	for(var id in idBooksRead){
+		$scope.booksRead.push(ref.child("books").child(id));
+	}
+	var idBooksWanted = $firebaseArray(ref.child("users").child($routeParams.userId).child("want"));
+	$scope.booksWanted = [];
+	for(var id in idBooksWanted){
+		$scope.booksWanted.push(ref.child("books").child(id));
+	}*/
 }]);
