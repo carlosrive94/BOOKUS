@@ -57,6 +57,17 @@ bookusControllers.controller('AuthCtrl', ['$scope', '$firebaseAuth' , '$firebase
 			}
 		});
 	};
+
+	$scope.loginFacebook = function() {
+		console.log("Login with Facebook");
+		ref.authWithOAuthPopup("facebook", function(error, authData) {
+			if (error) {
+				console.log("Login Failed!", error);
+			} else {
+				console.log("Authenticated successfully with payload:", authData);
+			}
+		});
+	};
 	
 	$scope.logout = function(){
 		ref.unauth();
