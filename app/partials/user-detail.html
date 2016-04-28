@@ -1,0 +1,19 @@
+<h1>{{user.name}}</h1>
+
+<h3> BOOKS READ </h3>
+<ul class="books">
+	<li ng-repeat="book in booksRead | filter:query | orderBy:orderProp" class="thumbnail">
+		<a href="#/books/{{book.id}}" class="thumb"><img ng-src="{{book.imageUrl}}" alt="{{book.name}}" ></a>
+		<a href="#/books/{{book.id}}">{{book.name}}</a>
+		<p>{{book.author}}</p>
+	</li>
+</ul>
+
+<h3> BOOKS WANTED </h3>
+<ul class="books">
+	<li ng-repeat="book in booksWanted | filter:query | orderBy:orderProp" class="thumbnail">
+		<a href="#/books/{{book.id}}" class="thumb"><img ng-src="{{book.imageUrl}}" alt="{{book.name}}" ></a>
+		<a href="#/books/{{book.id}}">{{book.name}}</a>
+		<p>{{book.author}}</p>
+	</li>
+</ul>

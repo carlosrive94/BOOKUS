@@ -92,3 +92,11 @@ bookusControllers.controller('BookDetailCtrl', ['$scope', '$routeParams', '$fire
 	var ref = new Firebase("https://bookus.firebaseio.com/books/"+$routeParams.bookId);
 	$scope.book = $firebaseObject(ref);
 }]);
+
+bookusControllers.controller('UserCtrl', ['$scope', '$routeParams', '$firebaseObject', '$firebaseArray',
+  function($scope, $routeParams, $firebaseObject, $firebaseArray) {
+	var ref = new Firebase("https://bookus.firebaseio.com/users/"+$routeParams.userId);
+	$scope.user = $firebaseObject(ref);
+	$scope.booksRead = $firebaseArray(ref.child("read"));
+	$scope.booksWanted = $firebaseArray(ref.child("want"));
+}]);

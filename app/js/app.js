@@ -18,6 +18,10 @@ bookusApp.config(['$routeProvider',
         templateUrl: 'partials/book-detail.html',
         controller: 'BookDetailCtrl'
       }).
+      when('/user/:userId', {
+        templateUrl: 'partials/user-detail.html',
+        controller: 'UserCtrl'
+      }).
       otherwise({
         redirectTo: '/books'
       });

@@ -1,7 +1,7 @@
 <div class="container-fluid">
 	<div class "login" ng-controller="AuthCtrl">
 		<div ng-show="currentUser">
-			<p> Logged in as {{currentUser.name}} </p>
+			<p> Logged in as <a href="#/user/{{currentUser.uid}}">{{currentUser.name}} </a></p>
 			<a href="#" ng-click="logout()" class="btn btn-danger">Log Out</a>
 		</div>
 		<div ng-hide="currentUser">
