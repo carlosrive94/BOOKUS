@@ -6,13 +6,13 @@
 			<a href="#" ng-click="logout()" class="btn btn-danger">Log Out</a>
 		</div>
 		<div ng-hide="currentUser">
-			<a href="#" ng-click="loginGoogle()" class="btn btn-info">Google</a>
+			<a href="#" ng-click="login('google')" class="btn btn-info">Google</a>
 		</div>
 		<div ng-hide="currentUser">
-			<a href="#" ng-click="loginFacebook()" class="btn btn-info">Facebook</a>
+			<a href="#" ng-click="login('facebook')" class="btn btn-info">Facebook</a>
 		</div>
 		<div ng-hide="currentUser">
-			<a href="#" ng-click="loginTwitter()" class="btn btn-info">Twitter</a>
+			<a href="#" ng-click="login('twitter')" class="btn btn-info">Twitter</a>
 		</div>
 	</div>
   <div class="row">

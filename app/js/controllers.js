@@ -60,38 +60,16 @@ bookusControllers.controller('AuthCtrl', ['$scope', '$firebaseAuth' , '$firebase
 		}
 	};
 	
-	$scope.loginGoogle = function() {
-		console.log("Login with Google");
-		ref.authWithOAuthPopup("google", function(error, authData) {
+	$scope.login = function(provider){
+		console.log("Login with " + provider);
+		ref.authWithOAuthPopup(provider, function(error, authData) {
 			if (error) {
 				console.log("Login Failed!", error);
 			} else {
 				console.log("Authenticated successfully with payload:", authData);
 			}
 		});
-	};
-
-	$scope.loginTwitter = function() {
-		console.log("Login with Twitter");
-		ref.authWithOAuthPopup("twitter", function(error, authData) {
-			if (error) {
-				console.log("Login Failed!", error);
-			} else {
-				console.log("Authenticated successfully with payload:", authData);
-			}
-		});
-	};
-
-	$scope.loginFacebook = function() {
-		console.log("Login with Facebook");
-		ref.authWithOAuthPopup("facebook", function(error, authData) {
-			if (error) {
-				console.log("Login Failed!", error);
-			} else {
-				console.log("Authenticated successfully with payload:", authData);
-			}
-		});
-	};
+	}
 	
 	$scope.logout = function(){
 		ref.unauth();
