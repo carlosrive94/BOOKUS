@@ -10,7 +10,7 @@ bookusControllers.controller('BookListCtrl', ['$scope', '$firebaseArray',
 	
 	$scope.books = $firebaseArray(ref.child('books'));
 	
-	$scope.orderProp = 'author';
+	//$scope.orderProp = 'author';
 }]);
   
 bookusControllers.controller('AuthCtrl', ['$scope', '$firebaseAuth' , '$firebaseObject' , '$firebaseArray',

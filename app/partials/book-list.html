@@ -1,47 +1,48 @@
-<div class="container-fluid">
-	<div class "login" ng-controller="AuthCtrl">
-		<div ng-show="currentUser">
-			<p> Logged in as <a href="#/user/{{currentUser.uid}}">{{currentUser.name}} </a></p>
-			<img src="{{currentUser.photo}}"></img>
-			<a href="#" ng-click="logout()" class="btn btn-danger">Log Out</a>
+<div class="jumbotron">
+	<div class="container text-center">
+		<h1>Bookus</h1>      
+		<p>Books & shibas <3</p>
+	</div>
+</div>
+
+<nav class="navbar navbar-inverse">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>                        
+			</button>
+			<a class="navbar-brand" href="#">Logo</a>
 		</div>
-		<div ng-hide="currentUser">
-			<a href="#" ng-click="login('google')" class="btn btn-info">Google</a>
-		</div>
-		<div ng-hide="currentUser">
-			<a href="#" ng-click="login('facebook')" class="btn btn-info">Facebook</a>
-		</div>
-		<div ng-hide="currentUser">
-			<a href="#" ng-click="login('twitter')" class="btn btn-info">Twitter</a>
+		<div class="collapse navbar-collapse" id="myNavbar">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="#">Home</a></li>
+				<li><a href="#">My books</a></li>
+				<li><a href="#">News</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li>Search: <input ng-model="query"></li>
+				<li><a href="#"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
+			</ul>
 		</div>
 	</div>
-  <div class="row">
-    <div class="col-md-2">
-      <!--Sidebar content-->
+</nav>
 
-      Search: <input ng-model="query">
-      Sort by:
-      <select ng-model="orderProp">
-        <option value="name">Alphabetical</option>
-        <option value="age">Newest</option>
-      </select>
-
-    </div>
-    <div class="col-md-10">
-      <!--Body content-->
-
-      <ul class="books">
-		<li ng-repeat="book in books | filter:query | orderBy:orderProp" class="thumbnail">
-			<a href="#/books/{{book.id}}" class="thumb"><img ng-src="{{book.imageUrl}}" alt="{{book.name}}" ></a>
-			<a href="#/books/{{book.id}}">{{book.name}}</a>
-			<p>{{book.author}}</p>
-			<div ng-controller="AuthCtrl" ng-show="currentUser">
-				<a href="#" ng-click="addBookRead(book.id)" class="btn btn-info">Read</a>
-				<a href="#" ng-click="addBookWant(book.id)" class="btn btn-info">Want</a>
-			</div>
-        </li>
-      </ul>
-
-    </div>
-  </div>
+<div class="container">
+	<div class="row">
+		<div class="col-sm-4">
+			<ul class="books">
+			<li ng-repeat="book in books | filter:query | orderBy:orderProp" class="thumbnail">
+				<a href="#/books/{{book.id}}" class="thumb"><img ng-src="{{book.imageUrl}}" alt="{{book.name}}" ></a>
+				<a href="#/books/{{book.id}}">{{book.name}}</a>
+				<p>{{book.author}}</p>
+				<div ng-controller="AuthCtrl" ng-show="currentUser">
+					<a href="#" ng-click="addBookRead(book.id)" class="btn btn-info">Read</a>
+					<a href="#" ng-click="addBookWant(book.id)" class="btn btn-info">Want</a>
+				</div>
+			</li>
+			</ul>
+		</div>
+	</div>
 </div>
