@@ -18,24 +18,50 @@
 </head>
 <body>
 
-	<div class="login" ng-controller="AuthCtrl">
-		<div ng-show="currentUser">
-			<p> 
-				Logged in as <a href="#/user/{{currentUser.uid}}">{{currentUser.name}} </a>
-				<img src="{{currentUser.photo}}"></img>
-				<a href="#" ng-click="logout()" class="btn btn-danger">Log Out</a>
-			</p>
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>                        
+				</button>
+				<a class="navbar-brand" href="#">Logo</a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="#">My books</a></li>
+					<li><a href="#">News</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li>Search: <input ng-model="query"></li>
+					<li>
+						<div class="login nav navbar-nav navbar-right" ng-controller="AuthCtrl">
+							<div ng-show="currentUser">
+								<p> 
+									Logged in as <a href="#/user/{{currentUser.uid}}">{{currentUser.name}} </a>
+									<img src="{{currentUser.photo}}"></img>
+									<a href="#" ng-click="logout()" class="btn btn-danger">Log Out</a>
+								</p>
+							</div>
+							<div ng-hide="currentUser">
+								<a href="#" ng-click="login('google')" class="btn btn-info">Google</a>
+							</div>
+							<div ng-hide="currentUser">
+								<a href="#" ng-click="login('facebook')" class="btn btn-info">Facebook</a>
+							</div>
+							<div ng-hide="currentUser">
+								<a href="#" ng-click="login('twitter')" class="btn btn-info">Twitter</a>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
 		</div>
-		<div ng-hide="currentUser">
-			<a href="#" ng-click="login('google')" class="btn btn-info">Google</a>
-		</div>
-		<div ng-hide="currentUser">
-			<a href="#" ng-click="login('facebook')" class="btn btn-info">Facebook</a>
-		</div>
-		<div ng-hide="currentUser">
-			<a href="#" ng-click="login('twitter')" class="btn btn-info">Twitter</a>
-		</div>
-	</div>
+	</nav>
+
+	
 	
 	<div ng-view></div>
 	
