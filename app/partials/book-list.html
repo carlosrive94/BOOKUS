@@ -8,7 +8,7 @@
 
 <div class="container">
 	<div class="row">
-		<p>Newest</p>
+		<p><a href="#/category/Newest">Newest</a></p>
 		<div class="col-sm-3" ng-repeat="book in newBooks">
 			<a href="#/books/{{book.id}}" class="thumb">
 			<img ng-src="{{book.image}}" class="img-responsive" alt="{{book.name}}"></a>
@@ -22,7 +22,7 @@
 	</div>
 	
 	<div class="row">
-		<p>Comedy</p>
+		<p><a href="#/category/Comedy">Comedy</a></p>
 		<div class="col-sm-3" ng-repeat="book in comedyBooks">
 			<a href="#/books/{{book.id}}" class="thumb">
 			<img ng-src="{{book.image}}" class="img-responsive" alt="{{book.name}}"></a>
@@ -36,7 +36,7 @@
 	</div>
 	
 	<div class="row">
-		<p>Drama</p>
+		<p><a href="#/category/Drama">Drama</a></p>
 		<div class="col-sm-3" ng-repeat="book in dramaBooks">
 			<a href="#/books/{{book.id}}" class="thumb">
 			<img ng-src="{{book.image}}" class="img-responsive" alt="{{book.name}}"></a>
@@ -50,7 +50,7 @@
 	</div>
 	
 	<div class="row">
-		<p>Fiction</p>
+		<p><a href="#/category/Fiction">Fiction</a></p>
 		<div class="col-sm-3" ng-repeat="book in fictionBooks">
 			<a href="#/books/{{book.id}}" class="thumb">
 			<img ng-src="{{book.image}}" class="img-responsive" alt="{{book.name}}"></a>

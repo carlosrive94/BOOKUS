@@ -1,0 +1,23 @@
+<div class="jumbotron">
+	<div class="container text-center">
+		<h1>Bookus</h1>      
+		<p>Books & shibas <3</p>
+	</div>
+</div>
+
+
+<div class="container">
+	<div class="row">
+		<p><a href="#/category/newest">{{category}}</a></p>
+		<div class="col-sm-3" ng-repeat="book in books">
+			<a href="#/books/{{book.id}}" class="thumb">
+			<img ng-src="{{book.image}}" class="img-responsive" alt="{{book.name}}"></a>
+			<a href="#/books/{{book.id}}">{{book.title}}</a>
+			<p>{{book.author}}</p>
+			<div ng-controller="AuthCtrl" ng-show="currentUser">
+				<a href="#" ng-click="addBookRead(book.id)" class="btn btn-info">Read</a>
+				<a href="#" ng-click="addBookWant(book.id)" class="btn btn-info">Want</a>
+			</div>
+		</div>
+	</div>
+</div>
