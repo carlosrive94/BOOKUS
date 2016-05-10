@@ -7,20 +7,59 @@
 
 
 <div class="container">
-	<p>{{greeting}}</p>
 	<div class="row">
-		<div class="col-sm-4">
-			<ul class="books">
-			<li ng-repeat="book in books | filter:query | orderBy:orderProp" class="thumbnail">
-				<a href="#/books/{{book.id}}" class="thumb"><img ng-src="{{book.image}}" alt="{{book.name}}" ></a>
-				<a href="#/books/{{book.id}}">{{book.title}}</a>
-				<p>{{book.author}}</p>
-				<div ng-controller="AuthCtrl" ng-show="currentUser">
-					<a href="#" ng-click="addBookRead(book.id)" class="btn btn-info">Read</a>
-					<a href="#" ng-click="addBookWant(book.id)" class="btn btn-info">Want</a>
-				</div>
-			</li>
-			</ul>
+		<p>Newest</p>
+		<div class="col-sm-3" ng-repeat="book in newBooks">
+			<a href="#/books/{{book.id}}" class="thumb">
+			<img ng-src="{{book.image}}" class="img-responsive" alt="{{book.name}}"></a>
+			<a href="#/books/{{book.id}}">{{book.title}}</a>
+			<p>{{book.author}}</p>
+			<div ng-controller="AuthCtrl" ng-show="currentUser">
+				<a href="#" ng-click="addBookRead(book.id)" class="btn btn-info">Read</a>
+				<a href="#" ng-click="addBookWant(book.id)" class="btn btn-info">Want</a>
+			</div>
+		</div>
+	</div>
+	
+	<div class="row">
+		<p>Comedy</p>
+		<div class="col-sm-3" ng-repeat="book in comedyBooks">
+			<a href="#/books/{{book.id}}" class="thumb">
+			<img ng-src="{{book.image}}" class="img-responsive" alt="{{book.name}}"></a>
+			<a href="#/books/{{book.id}}">{{book.title}}</a>
+			<p>{{book.author}}</p>
+			<div ng-controller="AuthCtrl" ng-show="currentUser">
+				<a href="#" ng-click="addBookRead(book.id)" class="btn btn-info">Read</a>
+				<a href="#" ng-click="addBookWant(book.id)" class="btn btn-info">Want</a>
+			</div>
+		</div>
+	</div>
+	
+	<div class="row">
+		<p>Drama</p>
+		<div class="col-sm-3" ng-repeat="book in dramaBooks">
+			<a href="#/books/{{book.id}}" class="thumb">
+			<img ng-src="{{book.image}}" class="img-responsive" alt="{{book.name}}"></a>
+			<a href="#/books/{{book.id}}">{{book.title}}</a>
+			<p>{{book.author}}</p>
+			<div ng-controller="AuthCtrl" ng-show="currentUser">
+				<a href="#" ng-click="addBookRead(book.id)" class="btn btn-info">Read</a>
+				<a href="#" ng-click="addBookWant(book.id)" class="btn btn-info">Want</a>
+			</div>
+		</div>
+	</div>
+	
+	<div class="row">
+		<p>Fiction</p>
+		<div class="col-sm-3" ng-repeat="book in fictionBooks">
+			<a href="#/books/{{book.id}}" class="thumb">
+			<img ng-src="{{book.image}}" class="img-responsive" alt="{{book.name}}"></a>
+			<a href="#/books/{{book.id}}">{{book.title}}</a>
+			<p>{{book.author}}</p>
+			<div ng-controller="AuthCtrl" ng-show="currentUser">
+				<a href="#" ng-click="addBookRead(book.id)" class="btn btn-info">Read</a>
+				<a href="#" ng-click="addBookWant(book.id)" class="btn btn-info">Want</a>
+			</div>
 		</div>
 	</div>
 </div>

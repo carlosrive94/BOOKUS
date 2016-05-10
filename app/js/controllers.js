@@ -6,13 +6,24 @@ var bookusControllers = angular.module('bookusControllers', ["firebase"]);
 
 bookusControllers.controller('BookListCtrl', ['$scope', '$http',
   function($scope, $http) {  
-	$http.get('https://www.googleapis.com/books/v1/volumes?q=comedy&maxResults=5'). //TODO
-		success(function(data){
-			$scope.books = [];
-			angular.forEach(data.items , function(rawBook){
-				$scope.books.push(getBook(rawBook));
+
+	$scope.newBooks = getBooks(null,true);
+	$scope.comedyBooks = getBooks("Comedy",false);
+	$scope.dramaBooks = getBooks("Drama",false);
+	$scope.fictionBooks = getBooks("Fiction",false)
+	
+	function getBooks(category,newest){
+		var books = [];
+		var url;
+		if(newest) url = 'https://www.googleapis.com/books/v1/volumes?q=orderBy=newest&maxResults=4';
+		else url = 'https://www.googleapis.com/books/v1/volumes?q=subject:'+category+'&orderBy=relevance&maxResults=4';
+		$http.get(url).success(function(data){
+				angular.forEach(data.items , function(rawBook){
+					books.push(getBook(rawBook));
+				});
 			});
-		});
+		return books;
+	};
 }]);
 
 function getBook(rawBook){
