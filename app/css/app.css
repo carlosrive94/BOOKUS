@@ -91,9 +91,20 @@ h1 {
 .login div{
   float: right;
   margin: 10px 10px;
+  z-index: 30;
+  position: fixed;
+  right: 0px;
 }
 
 .jumbotron{
   overflow: hidden;
   width: 100%;
+}
+
+.navbar{
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  height: 11%;
+  z-index: 10;
 }
