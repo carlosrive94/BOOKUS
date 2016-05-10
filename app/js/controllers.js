@@ -1,6 +1,7 @@
 'use strict';
 
 /* Controllers */
+var APIKey = 'AIzaSyCtNBUQRvEOR-jmYBzg2oZ-H8IuI_pIc4Y';
 
 var bookusControllers = angular.module('bookusControllers', ["firebase"]);
 
@@ -15,8 +16,8 @@ bookusControllers.controller('BookListCtrl', ['$scope', '$http',
 	function getBooks(category,newest){
 		var books = [];
 		var url;
-		if(newest) url = 'https://www.googleapis.com/books/v1/volumes?q=orderBy=newest&maxResults=4';
-		else url = 'https://www.googleapis.com/books/v1/volumes?q=subject:'+category+'&orderBy=relevance&maxResults=4';
+		if(newest) url = 'https://www.googleapis.com/books/v1/volumes?q=orderBy=newest&maxResults=4&key='+APIKey;
+		else url = 'https://www.googleapis.com/books/v1/volumes?q=subject:'+category+'&orderBy=relevance&maxResults=4&key='+APIKey;
 		$http.get(url).success(function(data){
 				angular.forEach(data.items , function(rawBook){
 					books.push(getBook(rawBook));
@@ -113,9 +114,9 @@ bookusControllers.controller('AuthCtrl', ['$scope', '$firebaseAuth' , '$firebase
 
 bookusControllers.controller('BookDetailCtrl', ['$scope', '$routeParams', '$http',
   function($scope, $routeParams, $http) {
-	$http.get('https://www.googleapis.com/books/v1/volumes?q='+$routeParams.bookId).
+	$http.get('https://www.googleapis.com/books/v1/volumes/'+$routeParams.bookId).
 		success(function(data){
-			$scope.book = getBook(data.items[0]); //There will be always just one object
+			$scope.book = getBook(data);
 		});
 }]);
 
@@ -129,9 +130,9 @@ bookusControllers.controller('UserCtrl', ['$scope', '$routeParams', '$firebaseOb
 		.then(function(){
 			$scope.booksRead = [];
 			angular.forEach(idBooksRead, function(obj){
-				$http.get('https://www.googleapis.com/books/v1/volumes?q='+obj.id).
+				$http.get('https://www.googleapis.com/books/v1/volumes/'+obj.id).
 				success(function(data){
-					var book = getBook(data.items[0]); //There will be always just one object
+					var book = getBook(data);
 					$scope.booksRead.push(book);
 				});
 			})
@@ -142,9 +143,9 @@ bookusControllers.controller('UserCtrl', ['$scope', '$routeParams', '$firebaseOb
 		.then(function(){
 			$scope.booksWanted = [];
 			angular.forEach(idBooksWanted, function(obj){
-				$http.get('https://www.googleapis.com/books/v1/volumes?q='+obj.id).
+				$http.get('https://www.googleapis.com/books/v1/volumes/'+obj.id).
 				success(function(data){
-					var book = getBook(data.items[0]); //There will be always just one object
+					var book = getBook(data);
 					$scope.booksWanted.push(book);
 				});
 			})
@@ -156,8 +157,8 @@ bookusControllers.controller('CategoryCtrl', ['$scope', '$routeParams', '$http',
   	$scope.category = $routeParams.categoryId;
   	$scope.books = [];
   	var url;
-  	if ($routeParams.categoryId == "newest") url = 'https://www.googleapis.com/books/v1/volumes?q=orderBy=newest';
-  	else url = 'https://www.googleapis.com/books/v1/volumes?q=subject:'+$routeParams.categoryId; 
+  	if ($routeParams.categoryId == "newest") url = 'https://www.googleapis.com/books/v1/volumes?q=orderBy=newest&key='+APIKey;
+  	else url = 'https://www.googleapis.com/books/v1/volumes?q=subject:'+$routeParams.categoryId+'&key='+APIKey; 
 	$http.get(url).success(function(data){
 			angular.forEach(data.items , function(rawBook){
 				$scope.books.push(getBook(rawBook));
