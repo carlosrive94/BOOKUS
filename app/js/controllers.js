@@ -108,8 +108,8 @@ bookusControllers.controller('BookDetailCtrl', ['$scope', '$routeParams', '$http
 		});
 }]);
 
-bookusControllers.controller('UserCtrl', ['$scope', '$routeParams', '$firebaseObject', '$firebaseArray',
-  function($scope, $routeParams, $firebaseObject, $firebaseArray) {
+bookusControllers.controller('UserCtrl', ['$scope', '$routeParams', '$firebaseObject', '$firebaseArray', '$http',
+  function($scope, $routeParams, $firebaseObject, $firebaseArray, $http) {
 	var ref = new Firebase("https://bookus.firebaseio.com/");
 	$scope.user = $firebaseObject(ref.child("users").child($routeParams.userId));
 	
@@ -118,8 +118,11 @@ bookusControllers.controller('UserCtrl', ['$scope', '$routeParams', '$firebaseOb
 		.then(function(){
 			$scope.booksRead = [];
 			angular.forEach(idBooksRead, function(obj){
-				var book = $firebaseObject(ref.child("books").child(obj.id));
-				$scope.booksRead.push(book);
+				$http.get('https://www.googleapis.com/books/v1/volumes?q='+obj.id).
+				success(function(data){
+					var book = getBook(data.items[0]); //There will be always just one object
+					$scope.booksRead.push(book);
+				});
 			})
 		});
 	
@@ -128,8 +131,11 @@ bookusControllers.controller('UserCtrl', ['$scope', '$routeParams', '$firebaseOb
 		.then(function(){
 			$scope.booksWanted = [];
 			angular.forEach(idBooksWanted, function(obj){
-				var book = $firebaseObject(ref.child("books").child(obj.id));
-				$scope.booksWanted.push(book);
+				$http.get('https://www.googleapis.com/books/v1/volumes?q='+obj.id).
+				success(function(data){
+					var book = getBook(data.items[0]); //There will be always just one object
+					$scope.booksWanted.push(book);
+				});
 			})
 		});
 }]);
