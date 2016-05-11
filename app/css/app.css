@@ -3,9 +3,14 @@
 	width: 50px;
 }
 
+.login div{
+  margin-right: 10px;
+}
+
 .jumbotron{
   overflow: hidden;
   width: 100%;
+  margin-top: 3%;
 }
 
 .navbar{
@@ -14,4 +19,5 @@
   top: 0px;
   height: 8%;
   z-index: 10;
+  max-height: 54px;
 }
