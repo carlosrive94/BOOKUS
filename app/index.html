@@ -44,7 +44,7 @@
 						<div class="login nav navbar-nav navbar-right" ng-controller="AuthCtrl">
 							<div ng-show="currentUser">
 								<a href="#/user/{{currentUser.uid}}">
-								  <img src="{{currentUser.photo}}"></img>
+								  <img ng-src="{{currentUser.photo}}"></img>
 								  {{currentUser.name}} 
 								</a>
 								<a href="#" ng-click="logout()" class="btn btn-danger">Log Out</a>
