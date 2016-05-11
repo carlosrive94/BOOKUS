@@ -1,11 +1,8 @@
 'use strict';
 
 /* Category Controller */
-var APIKey = 'AIzaSyCtNBUQRvEOR-jmYBzg2oZ-H8IuI_pIc4Y';
 
-var categoryController = angular.module('categoryController', []);
-
-categoryController.controller('CategoryCtrl', ['$scope', '$routeParams', '$http',
+bookusControllers.controller('CategoryCtrl', ['$scope', '$routeParams', '$http',
   function($scope, $routeParams, $http) {
   	$scope.category = $routeParams.categoryId;
   	$scope.books = [];
