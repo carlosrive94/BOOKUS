@@ -5,11 +5,18 @@
 <p>{{book.description}}</p>
 
 <ul class="specs">
-  <li>
-    <span>Things</span>
     <dl>
       <dt>Author</dt>
       <dd>{{book.author}}</dd>
+	  
+	  <dt>Published Date</dt>
+      <dd>{{book.publishedDate}}</dd>
+	  
+	  <dt>Number of pages</dt>
+      <dd>{{book.pageCount}}</dd>
+	  
+	  <dt>Rating</dt>
+      <dd>{{book.averageRating}} // voted {{book.ratingsCount}} times</dd>
+	  
     </dl>
-  </li>
 </ul>

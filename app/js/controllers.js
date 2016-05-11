@@ -41,7 +41,12 @@ function getBook(rawBook){
 		id: rawBook.id,
 		title: rawBook.volumeInfo.title,
 		author: rawBook.volumeInfo.authors[0], //TODO
-		image: rawBook.volumeInfo.imageLinks.thumbnail
+		image: rawBook.volumeInfo.imageLinks.thumbnail,
+		publishedDate: rawBook.volumeInfo.publishedDate,
+		description: rawBook.volumeInfo.description,
+		averageRating: rawBook.volumeInfo.averageRating,
+		ratingsCount: rawBook.volumeInfo.ratingsCount,
+		pageCount: rawBook.volumeInfo.pageCount
 	}
 }
 
