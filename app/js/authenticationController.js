@@ -62,6 +62,7 @@ bookusControllers.controller('AuthCtrl', ['$scope', '$firebaseAuth' , '$firebase
 	
 	$scope.logout = function(){
 		ref.unauth();
+		location.reload();
 	};
 	
 	$scope.addBookRead = function(idBook){

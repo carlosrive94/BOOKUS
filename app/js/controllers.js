@@ -7,7 +7,8 @@ var bookusControllers = angular.module('bookusControllers', ["firebase"]);
 
 bookusControllers.controller('BookListCtrl', ['$scope', '$http',
   function($scope, $http) {  
-
+	changeNav("navHome");
+	
 	$scope.newBooks = getBooks(null,true);
 	$scope.comedyBooks = getBooks("Comedy",false);
 	$scope.dramaBooks = getBooks("Drama",false);
@@ -27,6 +28,14 @@ bookusControllers.controller('BookListCtrl', ['$scope', '$http',
 	};
 }]);
 
+function changeNav(currentNav){
+	document.getElementById("navHome").className = "";
+	document.getElementById("navMyBooks").className = "";
+	document.getElementById("navCategories").className = "";
+	document.getElementById("navNews").className = "";
+	document.getElementById(currentNav).className = "active";
+}
+
 function getBook(rawBook){
 	return {
 		id: rawBook.id,
@@ -37,7 +46,7 @@ function getBook(rawBook){
 }
 
 bookusControllers.controller('BookDetailCtrl', ['$scope', '$routeParams', '$http',
-  function($scope, $routeParams, $http) {
+  function($scope, $routeParams, $http) {  
 	$http.get('https://www.googleapis.com/books/v1/volumes/'+$routeParams.bookId).
 		success(function(data){
 			$scope.book = getBook(data);
