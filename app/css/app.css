@@ -21,3 +21,18 @@
   z-index: 10;
   max-height: 54px;
 }
+
+.category{
+  border: rgba(179, 169, 169, 0.5);
+  border-style: solid;
+  border-bottom-right-radius: 2em; 
+  border-top-left-radius: 2em;
+  background-color: #EEEEEE;
+  margin-bottom: 2em;
+}
+
+.category .catTitle{
+  margin-left: 1.5em;
+  font-family: 'MuseoSans_xFat';
+  font-size: 30px;
+}
