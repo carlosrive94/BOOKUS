@@ -118,5 +118,36 @@ bookusControllers.controller('AuthCtrl', ['$scope', '$firebaseAuth' , '$firebase
 			$scope.booksLikedRef.child(idBook).remove();
 		}
 	};
+	
+	$scope.checkProperties = function(idBook){
+		$scope.booksReadRef.child(idBook).once('value', function(snapshot){
+			if (snapshot.exists()) {
+				document.getElementById(idBook + 'R').className = "btn btn-sm btn-danger";
+				document.getElementById(idBook + 'R').innerHTML = "Unread";
+			}
+			else{
+				document.getElementById(idBook + 'R').className = "btn btn-sm btn-info";
+				document.getElementById(idBook + 'R').innerHTML = "Read";
+			}
+		});
+		
+		$scope.booksWantedRef.child(idBook).once('value', function(snapshot){
+			if (snapshot.exists()) {
+				document.getElementById(idBook + 'W').className = "btn btn-sm btn-danger";
+				document.getElementById(idBook + 'W').innerHTML = "Unwanted";
+			}
+			else{
+				document.getElementById(idBook + 'W').className = "btn btn-sm btn-info";
+				document.getElementById(idBook + 'W').innerHTML = "Wanted";
+			}
+		});
+		
+		$scope.booksLikedRef.child(idBook).once('value', function(snapshot){
+			if (snapshot.exists())
+				document.getElementById(idBook + 'L').className = 'fa fa-heart';
+			else
+				document.getElementById(idBook + 'L').className = "fa fa-heart-o";
+		});
+	}
 
 }]);

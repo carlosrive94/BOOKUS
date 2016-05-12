@@ -33,6 +33,19 @@ bookusControllers.controller('UserCtrl', ['$scope', '$routeParams', '$firebaseOb
 				});
 			})
 		});
+		
+	var idBooksLiked = $firebaseArray(ref.child("users").child($routeParams.userId).child("liked"));
+	idBooksWanted.$loaded()
+		.then(function(){
+			$scope.booksLiked = [];
+			angular.forEach(idBooksLiked, function(obj){
+				$http.get('https://www.googleapis.com/books/v1/volumes/'+obj.id).
+				success(function(data){
+					var book = getBook(data);
+					$scope.booksLiked.push(book);
+				});
+			})
+		});
 }]);
 
 bookusControllers.controller('UserSearchCtrl', ['$scope', '$firebaseObject', '$firebaseArray',

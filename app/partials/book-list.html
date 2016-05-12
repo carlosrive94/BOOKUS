@@ -9,10 +9,10 @@
 				<p class="bookTitle">{{book.title}}</p>
 			</a>
 			<p class="bookAuthor">{{book.authors}}</p>
-			<div ng-controller="AuthCtrl" ng-show="currentUser">
-				<a href="javascript:;" ng-click="addBookRead(book.id)" class="btn btn-sm btn-info" id="{{book.id}}R">Read</a>
-				<a href="javascript:;" ng-click="addBookWant(book.id)" class="btn btn-sm btn-info" id="{{book.id}}W">Want</a>
-				<a href="javascript:;" ng-click="addBookLiked(book.id)"><i class="fa fa-heart-o" id="{{book.id}}L" aria-hidden="true"></i></a>
+			<div ng-controller="AuthCtrl" ng-show="currentUser" ng-init="checkProperties(book.id)">
+				<a href="javascript:;" ng-click="addBookRead(book.id)" id="{{book.id}}R">Read</a>
+				<a href="javascript:;" ng-click="addBookWant(book.id)" id="{{book.id}}W">Want</a>
+				<a href="javascript:;" ng-click="addBookLiked(book.id)"><i id="{{book.id}}L" aria-hidden="true"></i></a>
 			</div>
 		</div>
 	</div>
@@ -27,10 +27,10 @@
 				<p class="bookTitle">{{book.title}}</p>
 			</a>
 			<p class="bookAuthor">{{book.authors}}</p>
-			<div ng-controller="AuthCtrl" ng-show="currentUser">
-				<a href="javascript:;" ng-click="addBookRead(book.id)" class="btn btn-sm btn-info" id="{{book.id}}R">Read</a>
-				<a href="javascript:;" ng-click="addBookWant(book.id)" class="btn btn-sm btn-info" id="{{book.id}}W">Want</a>
-				<a href="javascript:;" ng-click="addBookLiked(book.id)"><i class="fa fa-heart-o" id="{{book.id}}L" aria-hidden="true"></i></a>
+			<div ng-controller="AuthCtrl" ng-show="currentUser" ng-init="checkProperties(book.id)">
+				<a href="javascript:;" ng-click="addBookRead(book.id)" id="{{book.id}}R">Read</a>
+				<a href="javascript:;" ng-click="addBookWant(book.id)" id="{{book.id}}W">Want</a>
+				<a href="javascript:;" ng-click="addBookLiked(book.id)"><i id="{{book.id}}L" aria-hidden="true"></i></a>
 			</div>
 		</div>
 	</div>
@@ -45,10 +45,10 @@
 				<p class="bookTitle">{{book.title}}</p>
 			</a>
 			<p class="bookAuthor">{{book.authors}}</p>
-			<div ng-controller="AuthCtrl" ng-show="currentUser">
-				<a href="javascript:;" ng-click="addBookRead(book.id)" class="btn btn-sm btn-info" id="{{book.id}}R">Read</a>
-				<a href="javascript:;" ng-click="addBookWant(book.id)" class="btn btn-sm btn-info" id="{{book.id}}W">Want</a>
-				<a href="javascript:;" ng-click="addBookLiked(book.id)"><i class="fa fa-heart-o" id="{{book.id}}L" aria-hidden="true"></i></a>
+			<div ng-controller="AuthCtrl" ng-show="currentUser" ng-init="checkProperties(book.id)">
+				<a href="javascript:;" ng-click="addBookRead(book.id)" id="{{book.id}}R">Read</a>
+				<a href="javascript:;" ng-click="addBookWant(book.id)" id="{{book.id}}W">Want</a>
+				<a href="javascript:;" ng-click="addBookLiked(book.id)"><i id="{{book.id}}L" aria-hidden="true"></i></a>
 			</div>
 		</div>
 	</div>
@@ -63,10 +63,10 @@
 				<p class="bookTitle">{{book.title}}</p>
 			</a>
 			<p class="bookAuthor">{{book.authors}}</p>
-			<div ng-controller="AuthCtrl" ng-show="currentUser">
-				<a href="javascript:;" ng-click="addBookRead(book.id)" class="btn btn-sm btn-info" id="{{book.id}}R">Read</a>
-				<a href="javascript:;" ng-click="addBookWant(book.id)" class="btn btn-sm btn-info" id="{{book.id}}W">Want</a>
-				<a href="javascript:;" ng-click="addBookLiked(book.id)"><i class="fa fa-heart-o" id="{{book.id}}L" aria-hidden="true"></i></a>
+			<div ng-controller="AuthCtrl" ng-show="currentUser" ng-init="checkProperties(book.id)">
+				<a href="javascript:;" ng-click="addBookRead(book.id)" id="{{book.id}}R">Read</a>
+				<a href="javascript:;" ng-click="addBookWant(book.id)" id="{{book.id}}W">Want</a>
+				<a href="javascript:;" ng-click="addBookLiked(book.id)"><i id="{{book.id}}L" aria-hidden="true"></i></a>
 			</div>
 		</div>
 	</div>

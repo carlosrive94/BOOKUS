@@ -11,7 +11,7 @@
 			<input ng-model="queryRead" placeholder="Search">
 		</form>
 		<div class="col-sm-3"  ng-repeat="book in booksRead | filter:queryRead" class="thumbnail">
-			<a href="#/books/{{book.id}}" class="thumb">
+			<a href="javascript:;/books/{{book.id}}" class="thumb">
 				<div class="imgContainer">
 					<img ng-src="{{book.image}}" class="img-responsive" alt="{{book.name}}">
 				</div>
@@ -19,9 +19,9 @@
 			</a>
 			<p class="bookAuthor">{{book.authors}}</p>
 			<div ng-controller="AuthCtrl" ng-show="currentUser">
-				<a href="#" ng-click="addBookRead(book.id)" class="btn btn-sm btn-info">Read</a>
-				<a href="#" ng-click="addBookWant(book.id)" class="btn btn-sm btn-info">Want</a>
-				<a href="javascript:;" ng-click="likeBook(book.id)"><i class="fa fa-heart-o" id="{{book.id}}" aria-hidden="true"></i></a>
+				<a href="javascript:;" ng-click="addBookRead(book.id)" id="{{book.id}}R">Read</a>
+				<a href="javascript:;" ng-click="addBookWant(book.id)" id="{{book.id}}W">Want</a>
+				<a href="javascript:;" ng-click="addBookLiked(book.id)"><i id="{{book.id}}L" aria-hidden="true"></i></a>
 			</div>
 		</div>
 	</div>
@@ -32,7 +32,7 @@
 			<input ng-model="queryWanted" placeholder="Search">
 		</form>
 		<div class="col-sm-3" ng-repeat="book in booksWanted | filter:queryWanted" class="thumbnail">
-			<a href="#/books/{{book.id}}" class="thumb">
+			<a href="javascript:;/books/{{book.id}}" class="thumb">
 				<div class="imgContainer">
 					<img ng-src="{{book.image}}" class="img-responsive" alt="{{book.name}}">
 				</div>
@@ -40,20 +40,20 @@
 			</a>
 			<p class="bookAuthor">{{book.authors}}</p>
 			<div ng-controller="AuthCtrl" ng-show="currentUser">
-				<a href="#" ng-click="addBookRead(book.id)" class="btn btn-sm btn-info">Read</a>
-				<a href="#" ng-click="addBookWant(book.id)" class="btn btn-sm btn-info">Want</a>
-				<a href="javascript:;" ng-click="likeBook(book.id)"><i class="fa fa-heart-o" id="{{book.id}}" aria-hidden="true"></i></a>
+				<a href="javascript:;" ng-click="addBookRead(book.id)" id="{{book.id}}R">Read</a>
+				<a href="javascript:;" ng-click="addBookWant(book.id)" id="{{book.id}}W">Want</a>
+				<a href="javascript:;" ng-click="addBookLiked(book.id)"><i id="{{book.id}}L" aria-hidden="true"></i></a>
 			</div>
 		</div>
 	</div>
 
 	<div ng-show="booksLiked" class="row category">
 		<form>
-			<span class="catTitle">BOOKS LIKED</p> 
+			<span class="catTitle">BOOKS LIKED</span> 
 			<input ng-model="queryLiked" placeholder="Search">
 		</form>
 		<div class="col-sm-3" ng-repeat="book in booksLiked | filter:queryLiked" class="thumbnail">
-			<a href="#/books/{{book.id}}" class="thumb">
+			<a href="javascript:;/books/{{book.id}}" class="thumb">
 				<div class="imgContainer">
 					<img ng-src="{{book.image}}" class="img-responsive" alt="{{book.name}}">
 				</div>
@@ -61,9 +61,9 @@
 			</a>
 			<p class="bookAuthor">{{book.authors}}</p>
 			<div ng-controller="AuthCtrl" ng-show="currentUser">
-				<a href="#" ng-click="addBookRead(book.id)" class="btn btn-sm btn-info">Read</a>
-				<a href="#" ng-click="addBookWant(book.id)" class="btn btn-sm btn-info">Want</a>
-				<a href="javascript:;" ng-click="likeBook(book.id)"><i class="fa fa-heart-o" id="{{book.id}}" aria-hidden="true"></i></a>
+				<a href="javascript:;" ng-click="addBookRead(book.id)" id="{{book.id}}R">Read</a>
+				<a href="javascript:;" ng-click="addBookWant(book.id)" id="{{book.id}}W">Want</a>
+				<a href="javascript:;" ng-click="addBookLiked(book.id)"><i id="{{book.id}}L" aria-hidden="true"></i></a>
 			</div>
 		</div>
 	</div>
