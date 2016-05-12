@@ -73,3 +73,9 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+.fa.fa-heart, .fa.fa-heart-o{
+  color: red;
+  font-size: 150%;
+  margin-left: 0.5em;
+}
