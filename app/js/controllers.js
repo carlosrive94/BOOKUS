@@ -26,6 +26,15 @@ bookusControllers.controller('BookListCtrl', ['$scope', '$http',
 			});
 		return books;
 	};
+
+	$scope.likeBook = function (bookId){
+        if (document.getElementById(bookId).className == 'fa fa-heart-o'){
+        	document.getElementById(bookId).className = "fa fa-heart";
+        }
+        else{
+        	document.getElementById(bookId).className = "fa fa-heart-o";
+        }
+	}
 }]);
 
 function changeNav(currentNav){
