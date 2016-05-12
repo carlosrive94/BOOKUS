@@ -1,8 +1,8 @@
 {
-  "name": "angular-phonecat",
-  "description": "A starter project for AngularJS",
+  "name": "angular-bookus",
+  "description": "Books",
   "version": "0.0.0",
-  "homepage": "https://github.com/angular/angular-phonecat",
+  "homepage": "https://gitlab.ida.liu.se/carri364/TDDD272016_BOOKUS",
   "license": "MIT",
   "private": true,
   "dependencies": {
@@ -10,6 +10,7 @@
     "angular-mocks": "1.4.x",
     "jquery": "~2.1.1",
     "bootstrap": "~3.1.1",
-    "angular-route": "1.4.x"
+    "angular-route": "1.4.x",
+	"bootstrap-social": "5.0.0"
   }
 }
