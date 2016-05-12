@@ -1,1 +1,12 @@
-USERS
+<h3>USERS</h3>
+
+<div class="col-md-2">
+  Search: <input ng-model="query">
+</div>
+
+<div class="users" ng-controller="UserSearchCtrl" ng-repeat="user in users | filter:query">
+	<a href="#/user/{{user.uid}}">
+	  <img ng-src="{{user.photo}}"></img>
+	  <span>{{user.name}}</span> 
+	</a>
+</div>

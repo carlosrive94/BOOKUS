@@ -38,7 +38,15 @@
 				<ul class="nav navbar-nav">
 					<li id="navHome"><a href="#">Home</a></li>
 					<li id="navMyBooks"><a href="#/user/{{currentUser.uid}}">My books</a></li>
-					<li id="navCategories"><a href="#/category">Categories</a></li>
+					<li id="navCategories" class="dropdown">
+					  <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categories <span class="caret"></span></a>
+					  <ul class="dropdown-menu">
+						<li><a href="#/category/newest">Newest</a></li>
+						<li><a href="#/category/comedy">Comedy</a></li>
+						<li><a href="#/category/drama">Drama</a></li>
+						<li><a href="#/category/fiction">Fiction</a></li>
+					  </ul>
+					</li>
 					<li id="navUsers"><a href="#/user">Users</a></li>
 					<li id="navNews"><a href="#/news">News</a></li>
 				</ul>

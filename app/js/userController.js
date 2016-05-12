@@ -35,7 +35,10 @@ bookusControllers.controller('UserCtrl', ['$scope', '$routeParams', '$firebaseOb
 		});
 }]);
 
-bookusControllers.controller('UserSearchCtrl', ['$scope',
-  function($scope){
-	  changeNav("navUsers");
+bookusControllers.controller('UserSearchCtrl', ['$scope', '$firebaseObject', '$firebaseArray',
+  function($scope, $firebaseObject, $firebaseArray){
+	changeNav("navUsers");
+	
+	var ref = new Firebase("https://bookus.firebaseio.com/users");
+	$scope.users = $firebaseArray(ref);
   }]);
