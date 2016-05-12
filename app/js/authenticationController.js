@@ -20,8 +20,8 @@ bookusControllers.controller('AuthCtrl', ['$scope', '$firebaseAuth' , '$firebase
 				}
 			});
 			$scope.currentUser = $firebaseObject(ref.child(authData.uid));
-			$scope.booksRead = $firebaseArray(ref.child(authData.uid).child("read"));
-			$scope.booksWanted = $firebaseArray(ref.child(authData.uid).child("want"));
+			$scope.booksReadRef = ref.child(authData.uid).child("read");
+			$scope.booksWantedRef = ref.child(authData.uid).child("want");
 		}
 	});
 	
@@ -66,13 +66,15 @@ bookusControllers.controller('AuthCtrl', ['$scope', '$firebaseAuth' , '$firebase
 	};
 	
 	$scope.addBookRead = function(idBook){
-		$scope.booksRead.$add({
+		$scope.booksReadRef.child(idBook).set(
+		{
 			id: idBook
 		});
 	};
 	
 	$scope.addBookWant = function(idBook){
-		$scope.booksWanted.$add({
+		$scope.booksWantedRef.child(idBook).set(
+		{
 			id: idBook
 		});
 	};

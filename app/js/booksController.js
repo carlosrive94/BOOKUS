@@ -1,6 +1,6 @@
 'use strict';
 
-/* Controllers */
+/* Books Controllers */
 
 bookusControllers.controller('BookListCtrl', ['$scope', '$http',
   function($scope, $http) {  
