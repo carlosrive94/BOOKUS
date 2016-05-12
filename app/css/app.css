@@ -6,6 +6,16 @@
 
 .login div{
   margin-right: 10px;
+  margin-top: 3px;
+}
+
+.login .username{
+	color: #999;
+}
+
+.login .logout{
+	color: #fff;
+	margin-left: 10px;
 }
 
 .jumbotron{

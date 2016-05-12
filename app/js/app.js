@@ -17,14 +17,26 @@ bookusApp.config(['$routeProvider',
       when('/books/:bookId', {
         templateUrl: 'partials/book-detail.html',
         controller: 'BookDetailCtrl'
+      }).      
+      when('/user', {
+        templateUrl: 'partials/user-search.html',
+        controller: 'UserSearchCtrl'
       }).
-      when('/user/:userId', {
+	  when('/user/:userId', {
         templateUrl: 'partials/user-detail.html',
         controller: 'UserCtrl'
+      }).
+	  when('/category', {
+        templateUrl: 'partials/category-search.html',
+        controller: 'CategorySearchCtrl'
       }).
       when('/category/:categoryId', {
         templateUrl: 'partials/category.html',
         controller: 'CategoryCtrl'
+      }).
+	  when('/news', {
+        templateUrl: 'partials/news.html',
+        controller: 'NewsCtrl'
       }).
       otherwise({
         redirectTo: '/books'

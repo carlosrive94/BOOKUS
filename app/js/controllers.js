@@ -32,6 +32,7 @@ function changeNav(currentNav){
 	document.getElementById("navHome").className = "";
 	document.getElementById("navMyBooks").className = "";
 	document.getElementById("navCategories").className = "";
+	document.getElementById("navUsers").className = "";
 	document.getElementById("navNews").className = "";
 	document.getElementById(currentNav).className = "active";
 }

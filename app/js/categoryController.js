@@ -17,3 +17,8 @@ bookusControllers.controller('CategoryCtrl', ['$scope', '$routeParams', '$http',
 			});
 		});
 }]);
+
+bookusControllers.controller('CategorySearchCtrl', ['$scope',
+  function($scope) {
+	  changeNav("navCategories");  
+}]);
