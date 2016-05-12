@@ -1,0 +1,325 @@
+{
+ "kind": "books#volumes",
+ "totalItems": 1876,
+ "items": [
+  {
+   "kind": "books#volume",
+   "id": "dRoZBwAAQBAJ",
+   "etag": "nQB8oemqQtI",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/dRoZBwAAQBAJ",
+   "volumeInfo": {
+    "title": "Der sterbende Cato",
+    "subtitle": "Ein Trauerspiel",
+    "authors": [
+     "Johann Christoph Gottsched"
+    ],
+    "publisher": "BoD – Books on Demand",
+    "publishedDate": "2016-04-22",
+    "description": "Johann Christoph Gottsched: Der sterbende Cato. Ein Trauerspiel Entstanden: 1730. Erstdruck: Leipzig (Teubners Buchladen), 1732. Uraufführung Januar 1731 durch die Neubersche Theatergruppe. Vollständige Neuausgabe mit einer Biographie des Autors. Herausgegeben von Karl-Maria Guth. Berlin 2016, 2. Auflage. Textgrundlage ist die Ausgabe: Johann Christoph Gottsched: Ausgewählte Werke. Herausgegeben von Joachim Birke, Band 1: Gedichte und Gedichtübertragungen, Band 2: Sämtliche Dramen, Berlin: Walter de Gruyter & Co., 1968/1970. Die Paginierung obiger Ausgabe wird in dieser Neuausgabe als Marginalie zeilengenau mitgeführt. Umschlaggestaltung von Thomas Schultz-Overhage unter Verwendung des Bildes: Guillaume Guillon Lethière, Der Tod des Cato, 1795. Gesetzt aus der Minion Pro, 11 pt.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9783843041652"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "3843041652"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 80,
+    "printType": "BOOK",
+    "categories": [
+     "Drama"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.1.1.0.preview.1",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.se/books/content?id=dRoZBwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.se/books/content?id=dRoZBwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "de",
+    "previewLink": "http://books.google.se/books?id=dRoZBwAAQBAJ&printsec=frontcover&dq=subject:drama&hl=&cd=1&source=gbs_api",
+    "infoLink": "http://books.google.se/books?id=dRoZBwAAQBAJ&dq=subject:drama&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.se/books/about/Der_sterbende_Cato.html?hl=&id=dRoZBwAAQBAJ"
+   },
+   "saleInfo": {
+    "country": "SE",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "SE",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.se/books/reader?id=dRoZBwAAQBAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "B65fXr91vSUC",
+   "etag": "46KRAx+P1bw",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/B65fXr91vSUC",
+   "volumeInfo": {
+    "title": "Cymbeline in Plain and Simple English (a Modern Translation and the Original Version)",
+    "authors": [
+     "Shakespeare William",
+     "BookCaps Study Guides Staff",
+     "BookCaps"
+    ],
+    "publisher": "BookCaps Study Guides",
+    "publishedDate": "2016-04-08",
+    "description": "Romeo and Juliet may be Shakespeare's most known romance, but Cymbeline is home of his most matures...if you can understand it. Let BookCaps help with this modern retelling of Shakespeare's classic tragedy. If you have struggled in the past reading Shakespeare, then BookCaps can help you out. This book is a modern translation of Cymbeline. The original text is also presented in the book, along with a comparable version of both text. We all need refreshers every now and then. Whether you are a student trying to cram for that big final, or someone just trying to understand a book more, BookCaps can help. We are a small, but growing company, and are adding titles every month.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9781621073178"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "1621073173"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": true
+    },
+    "pageCount": 166,
+    "printType": "BOOK",
+    "categories": [
+     "Drama"
+    ],
+    "averageRating": 5.0,
+    "ratingsCount": 1,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.2.2.0.preview.3",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.se/books/content?id=B65fXr91vSUC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.se/books/content?id=B65fXr91vSUC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.se/books?id=B65fXr91vSUC&printsec=frontcover&dq=subject:drama&hl=&cd=2&source=gbs_api",
+    "infoLink": "http://books.google.se/books?id=B65fXr91vSUC&dq=subject:drama&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.se/books/about/Cymbeline_in_Plain_and_Simple_English_a.html?hl=&id=B65fXr91vSUC"
+   },
+   "saleInfo": {
+    "country": "SE",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+     "amount": 57.03,
+     "currencyCode": "SEK"
+    },
+    "retailPrice": {
+     "amount": 42.77,
+     "currencyCode": "SEK"
+    },
+    "buyLink": "http://books.google.se/books?id=B65fXr91vSUC&dq=subject:drama&hl=&buy=&source=gbs_api",
+    "offers": [
+     {
+      "finskyOfferType": 1,
+      "listPrice": {
+       "amountInMicros": 5.703E7,
+       "currencyCode": "SEK"
+      },
+      "retailPrice": {
+       "amountInMicros": 4.277E7,
+       "currencyCode": "SEK"
+      }
+     }
+    ]
+   },
+   "accessInfo": {
+    "country": "SE",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.se/books/download/Cymbeline_in_Plain_and_Simple_English_a-sample-epub.acsm?id=B65fXr91vSUC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.se/books/download/Cymbeline_in_Plain_and_Simple_English_a-sample-pdf.acsm?id=B65fXr91vSUC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "webReaderLink": "http://books.google.se/books/reader?id=B65fXr91vSUC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "15ZVCgAAQBAJ",
+   "etag": "HgmgMS/EzOo",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/15ZVCgAAQBAJ",
+   "volumeInfo": {
+    "title": "The Oldest Boy",
+    "subtitle": "A Play in Three Ceremonies",
+    "authors": [
+     "Sarah Ruhl"
+    ],
+    "publisher": "Macmillan",
+    "publishedDate": "2016-03-01",
+    "description": "In this moving exploration of parenthood, an American mother and a Tibetan father have a three-year-old son believed to be the reincarnation of a Buddhist lama. When a Tibetan lama and a monk come to their home unexpectedly, asking to take their child away for a life of spiritual training in India, the parents must make a life-altering choice that will test their strength, their marriage, and their hearts. The Oldest Boy is a richly emotional journey filled with music, dance, puppetry, ritual, and laughter—Sarah Ruhl at her imaginative best. A meditation on attachment and unconditional love, the play asks us to believe in a world in which sometimes the youngest children are also the oldest and wisest teachers.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9780374714598"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "0374714592"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": false
+    },
+    "pageCount": 128,
+    "printType": "BOOK",
+    "categories": [
+     "Drama"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "2.3.3.0.preview.2",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.se/books/content?id=15ZVCgAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.se/books/content?id=15ZVCgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.se/books?id=15ZVCgAAQBAJ&printsec=frontcover&dq=subject:drama&hl=&cd=3&source=gbs_api",
+    "infoLink": "http://books.google.se/books?id=15ZVCgAAQBAJ&dq=subject:drama&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.se/books/about/The_Oldest_Boy.html?hl=&id=15ZVCgAAQBAJ"
+   },
+   "saleInfo": {
+    "country": "SE",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+     "amount": 167.71,
+     "currencyCode": "SEK"
+    },
+    "retailPrice": {
+     "amount": 117.4,
+     "currencyCode": "SEK"
+    },
+    "buyLink": "http://books.google.se/books?id=15ZVCgAAQBAJ&dq=subject:drama&hl=&buy=&source=gbs_api",
+    "offers": [
+     {
+      "finskyOfferType": 1,
+      "listPrice": {
+       "amountInMicros": 1.6771E8,
+       "currencyCode": "SEK"
+      },
+      "retailPrice": {
+       "amountInMicros": 1.174E8,
+       "currencyCode": "SEK"
+      }
+     }
+    ]
+   },
+   "accessInfo": {
+    "country": "SE",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.se/books/download/The_Oldest_Boy-sample-epub.acsm?id=15ZVCgAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.se/books/reader?id=15ZVCgAAQBAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "gc4SBwAAQBAJ",
+   "etag": "Dg0ZMMSTjVg",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/gc4SBwAAQBAJ",
+   "volumeInfo": {
+    "title": "Dantons Tod",
+    "authors": [
+     "Georg Büchner"
+    ],
+    "publisher": "BoD – Books on Demand",
+    "publishedDate": "2016-04-03",
+    "description": "Georg Büchner: Dantons Tod Entstanden: 1834. Erstdruck: Verstümmelt, in: Phönix. Frühlingszeitung für Deutschland (Frankfurt/M.), März/April 1835, Erste Buchausgabe: Frankfurt/M. 1835. Uraufführung am 5.1.1902 in Berlin. Vollständige Neuausgabe mit einer Biographie des Autors. Herausgegeben von Karl-Maria Guth. Berlin 2014. Textgrundlage ist die Ausgabe: Georg Büchner: Werke und Briefe. Neue, durchgesehene Ausgabe. Herausgegeben von Fritz Bergemann, 13. Auflage, Frankfurt a.M.: Insel, 1979. Die Paginierung obiger Ausgabe wird in dieser Neuausgabe als Marginalie zeilengenau mitgeführt. Umschlaggestaltung von Thomas Schultz-Overhage unter Verwendung des Bildes: Nicolas Taunay, Der Triumph der Guillotine, 1798. Gesetzt aus Minion Pro, 11 pt.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9783843039413"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "3843039410"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 76,
+    "printType": "BOOK",
+    "categories": [
+     "Drama"
+    ],
+    "averageRating": 2.5,
+    "ratingsCount": 6,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.1.1.0.preview.1",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.se/books/content?id=gc4SBwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.se/books/content?id=gc4SBwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "de",
+    "previewLink": "http://books.google.se/books?id=gc4SBwAAQBAJ&printsec=frontcover&dq=subject:drama&hl=&cd=4&source=gbs_api",
+    "infoLink": "http://books.google.se/books?id=gc4SBwAAQBAJ&dq=subject:drama&hl=&source=gbs_api",
+    "canonicalVolumeLink": "http://books.google.se/books/about/Dantons_Tod.html?hl=&id=gc4SBwAAQBAJ"
+   },
+   "saleInfo": {
+    "country": "SE",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "SE",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.se/books/reader?id=gc4SBwAAQBAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  }
+ ]
+}

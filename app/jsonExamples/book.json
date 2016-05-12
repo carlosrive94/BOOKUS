@@ -1,0 +1,77 @@
+{
+ "kind": "books#volume",
+ "id": "dRoZBwAAQBAJ",
+ "etag": "NtP2pZkAfLo",
+ "selfLink": "https://www.googleapis.com/books/v1/volumes/dRoZBwAAQBAJ",
+ "volumeInfo": {
+  "title": "Der sterbende Cato",
+  "subtitle": "Ein Trauerspiel",
+  "authors": [
+   "Johann Christoph Gottsched"
+  ],
+  "publisher": "BoD – Books on Demand",
+  "publishedDate": "2016-04-22",
+  "description": "Johann Christoph Gottsched: Der sterbende Cato. Ein Trauerspiel Entstanden: 1730. Erstdruck: Leipzig (Teubners Buchladen), 1732. Uraufführung Januar 1731 durch die Neubersche Theatergruppe. Vollständige Neuausgabe mit einer Biographie des Autors. Herausgegeben von Karl-Maria Guth. Berlin 2016, 2. Auflage. Textgrundlage ist die Ausgabe: Johann Christoph Gottsched: Ausgewählte Werke. Herausgegeben von Joachim Birke, Band 1: Gedichte und Gedichtübertragungen, Band 2: Sämtliche Dramen, Berlin: Walter de Gruyter & Co., 1968/1970. Die Paginierung obiger Ausgabe wird in dieser Neuausgabe als Marginalie zeilengenau mitgeführt. Umschlaggestaltung von Thomas Schultz-Overhage unter Verwendung des Bildes: Guillaume Guillon Lethière, Der Tod des Cato, 1795. Gesetzt aus der Minion Pro, 11 pt.",
+  "industryIdentifiers": [
+   {
+    "type": "ISBN_10",
+    "identifier": "3843041652"
+   },
+   {
+    "type": "ISBN_13",
+    "identifier": "9783843041652"
+   }
+  ],
+  "readingModes": {
+   "text": false,
+   "image": true
+  },
+  "pageCount": 80,
+  "printedPageCount": 82,
+  "dimensions": {
+   "height": "22.00 cm",
+   "width": "15.50 cm",
+   "thickness": "0.50 cm"
+  },
+  "printType": "BOOK",
+  "categories": [
+   "Drama / General"
+  ],
+  "maturityRating": "NOT_MATURE",
+  "allowAnonLogging": false,
+  "contentVersion": "0.1.1.0.preview.1",
+  "imageLinks": {
+   "smallThumbnail": "http://books.google.se/books/content?id=dRoZBwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE738x-Upx5lIGrxCJ3BZA291eXsqi6SCGqzEk5IO_FN0UExOnayVzB_0uPohjoqCst0-5tSRsbK6tpce2FLrzAbPMHy7dyKdFL8dpSHGCbssV7F7PB7lvBSmInfEel2El4i1Vgb-&source=gbs_api",
+   "thumbnail": "http://books.google.se/books/content?id=dRoZBwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE72XycwYQhWuw1oe3MkS_VTjE8uxaT1lGFTXL_iay4clUi5Twr4OcJ9KYh399mFzXoPMAGN--nDQp2nbMLyUvGGWtAsfvhZQVLttDOwTw510RLb1F3mzgD38vXGDlDv9TYvnH-Mk&source=gbs_api",
+   "small": "http://books.google.se/books/content?id=dRoZBwAAQBAJ&printsec=frontcover&img=1&zoom=2&edge=curl&imgtk=AFLRE72Fqtw_GblW-fflSxRE1kMzTbZ95pCC1zOMxsfwGwW_C_G-7XuM-ukedFtHEu_hKhVVXSuu7G6d-n-_xn1t-6EconO9G2cWiBwCEGEVAEhJbJ3bUK2O4cK905I-zP3bxfdRTGGo&source=gbs_api",
+   "medium": "http://books.google.se/books/content?id=dRoZBwAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&imgtk=AFLRE71VRpdnphaDfTsJq21yiAkJIQnt7kPHA49zdipTL7p5R73cvScee9WXRoLenT1JMMU8ZnG0KJofEilYDjvZdk6Y14fp91dezckxksgGcGhUwEmNaLIvMV8RGHpSlLMq2q1wqt32&source=gbs_api",
+   "large": "http://books.google.se/books/content?id=dRoZBwAAQBAJ&printsec=frontcover&img=1&zoom=4&edge=curl&imgtk=AFLRE71JHq3SzEgNkyxfG516RMpmkw6jYSfayF2Mp62fJPrvIvu9NyODNDf6hnzCwQPaMNp-1e6f34Rb5HLpW1mJpp2IwGYUikSbw4fFiZQqH18JAx5nW9yBkcT01VpWjfiCvjWSAv5Y&source=gbs_api",
+   "extraLarge": "http://books.google.se/books/content?id=dRoZBwAAQBAJ&printsec=frontcover&img=1&zoom=6&edge=curl&imgtk=AFLRE73ws24UwteuSNfokBoyacRbi96pS-pYlhUkAH3tioqvM1gwuttbRbqqXejC81KWVMNKdtfsKZmZmXffPeNJqZwMOVD9MZutR9qu_vcJf3dA7OseiIG0YC1HhEOO7oqbuRZzTlHz&source=gbs_api"
+  },
+  "language": "de",
+  "previewLink": "http://books.google.se/books?id=dRoZBwAAQBAJ&hl=&source=gbs_api",
+  "infoLink": "http://books.google.se/books?id=dRoZBwAAQBAJ&hl=&source=gbs_api",
+  "canonicalVolumeLink": "http://books.google.se/books/about/Der_sterbende_Cato.html?hl=&id=dRoZBwAAQBAJ"
+ },
+ "saleInfo": {
+  "country": "SE",
+  "saleability": "NOT_FOR_SALE",
+  "isEbook": false
+ },
+ "accessInfo": {
+  "country": "SE",
+  "viewability": "PARTIAL",
+  "embeddable": true,
+  "publicDomain": false,
+  "textToSpeechPermission": "ALLOWED",
+  "epub": {
+   "isAvailable": false
+  },
+  "pdf": {
+   "isAvailable": false
+  },
+  "webReaderLink": "http://books.google.se/books/reader?id=dRoZBwAAQBAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+  "accessViewStatus": "SAMPLE",
+  "quoteSharingAllowed": false
+ }
+}

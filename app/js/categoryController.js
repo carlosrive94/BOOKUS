@@ -9,8 +9,11 @@ bookusControllers.controller('CategoryCtrl', ['$scope', '$routeParams', '$http',
 	$scope.category = $routeParams.categoryId;
 	$scope.books = [];
 	var url;
-	if ($routeParams.categoryId == "Newest") url = 'https://www.googleapis.com/books/v1/volumes?q=a&orderBy=newest&key='+APIKey;
-	else url = 'https://www.googleapis.com/books/v1/volumes?q=subject:'+$routeParams.categoryId+'&orderBy=newest&key='+APIKey; 
+	if(test) url = 'jsonExamples/book-list.json';
+	else{
+		if ($routeParams.categoryId == "Newest") url = 'https://www.googleapis.com/books/v1/volumes?q=a&orderBy=newest&key='+APIKey;
+		else url = 'https://www.googleapis.com/books/v1/volumes?q=subject:'+$routeParams.categoryId+'&orderBy=newest&key='+APIKey; 
+	}
 	$http.get(url).success(function(data){
 			angular.forEach(data.items , function(rawBook){
 				$scope.books.push(getBook(rawBook));
