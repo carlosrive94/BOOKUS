@@ -22,6 +22,7 @@ bookusControllers.controller('AuthCtrl', ['$scope', '$firebaseAuth' , '$firebase
 			$scope.currentUser = $firebaseObject(ref.child(authData.uid));
 			$scope.booksReadRef = ref.child(authData.uid).child("read");
 			$scope.booksWantedRef = ref.child(authData.uid).child("want");
+			$scope.booksLikedRef = ref.child(authData.uid).child("liked");
 		}
 	});
 	
@@ -66,10 +67,20 @@ bookusControllers.controller('AuthCtrl', ['$scope', '$firebaseAuth' , '$firebase
 	};
 	
 	$scope.addBookRead = function(idBook){
-		$scope.booksReadRef.child(idBook).set(
-		{
-			id: idBook
-		});
+		if (document.getElementById(idBook + 'R').innerHTML == 'Read'){
+        	document.getElementById(idBook + 'R').innerHTML = "Unread";
+        	document.getElementById(idBook + 'R').className = "btn btn-danger";
+        	document.getElementById(idBook + 'W').className = "btn btn-info disabled";
+        	$scope.booksReadRef.child(idBook).set({
+				id: idBook
+			});
+        }
+        else{
+        	document.getElementById(idBook + 'R').innerHTML = "Read";
+        	document.getElementById(idBook + 'R').className = "btn btn-info";
+        	document.getElementById(idBook + 'W').className = "btn btn-info";
+        	$scope.booksReadRef.child(idBook).remove();
+        }
 	};
 	
 	$scope.addBookWant = function(idBook){
@@ -78,4 +89,18 @@ bookusControllers.controller('AuthCtrl', ['$scope', '$firebaseAuth' , '$firebase
 			id: idBook
 		});
 	};
+
+	$scope.addBookLiked = function(idBook){
+		if (document.getElementById(idBook).className == 'fa fa-heart-o'){
+        	document.getElementById(idBook).className = "fa fa-heart";
+        	$scope.booksLikedRef.child(idBook).set({
+				id: idBook
+			});
+        }
+        else{
+        	document.getElementById(idBook).className = "fa fa-heart-o";
+        	$scope.booksLikedRef.child(idBook).remove();
+        }
+	};
+
 }]);
