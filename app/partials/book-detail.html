@@ -1,13 +1,13 @@
-<img ng-src="{{book.image}}" class="book">
+<img ng-src="{{book.image}}">
 
 <h1>{{book.title}}</h1>
 
-<p>{{book.description}}</p>
+<p id="bookDescription">description</p>
 
 <ul class="specs">
     <dl>
       <dt>Author</dt>
-      <dd>{{book.author}}</dd>
+      <dd>{{book.authors}}</dd>
 	  
 	  <dt>Published Date</dt>
       <dd>{{book.publishedDate}}</dd>
@@ -16,7 +16,8 @@
       <dd>{{book.pageCount}}</dd>
 	  
 	  <dt>Rating</dt>
-      <dd>{{book.averageRating}} // voted {{book.ratingsCount}} times</dd>
-	  
+      <dd ng-show="book.averageRating">{{book.averageRating}} // voted {{book.ratingsCount}} times</dd>
+	  <dd ng-hide="book.averageRating">Not voted yet</dd>
+
     </dl>
 </ul>

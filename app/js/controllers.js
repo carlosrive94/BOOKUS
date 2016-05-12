@@ -37,10 +37,15 @@ function changeNav(currentNav){
 }
 
 function getBook(rawBook){
+	var authors = "";
+	for (var i=0; i < rawBook.volumeInfo.authors.length; ++i){
+		authors += rawBook.volumeInfo.authors[i];
+		if(i != rawBook.volumeInfo.authors.length-1) authors += ", ";
+	};
 	return {
 		id: rawBook.id,
 		title: rawBook.volumeInfo.title,
-		author: rawBook.volumeInfo.authors[0], //TODO
+		authors: authors,
 		image: rawBook.volumeInfo.imageLinks.thumbnail,
 		publishedDate: rawBook.volumeInfo.publishedDate,
 		description: rawBook.volumeInfo.description,
@@ -55,5 +60,6 @@ bookusControllers.controller('BookDetailCtrl', ['$scope', '$routeParams', '$http
 	$http.get('https://www.googleapis.com/books/v1/volumes/'+$routeParams.bookId).
 		success(function(data){
 			$scope.book = getBook(data);
+			document.getElementById("bookDescription").innerHTML = $scope.book.description;
 		});
 }]);

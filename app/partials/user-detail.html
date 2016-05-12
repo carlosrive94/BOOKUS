@@ -14,7 +14,7 @@
 	<li ng-repeat="book in booksRead | filter:query | orderBy:orderProp" class="thumbnail">
 		<a href="#/books/{{book.id}}" class="thumb"><img ng-src="{{book.image}}" alt="{{book.title}}" ></a>
 		<a href="#/books/{{book.id}}">{{book.title}}</a>
-		<p>{{book.author}}</p>
+		<p>{{book.authors}}</p>
 	</li>
 </ul>
 
@@ -32,6 +32,6 @@
 	<li ng-repeat="book in booksWanted | filter:query | orderBy:orderProp" class="thumbnail">
 		<a href="#/books/{{book.id}}" class="thumb"><img ng-src="{{book.image}}" alt="{{book.title}}" ></a>
 		<a href="#/books/{{book.id}}">{{book.title}}</a>
-		<p>{{book.author}}</p>
+		<p>{{book.authors}}</p>
 	</li>
 </ul>
