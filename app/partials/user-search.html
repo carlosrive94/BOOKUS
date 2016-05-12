@@ -1,12 +1,13 @@
-<h3>USERS</h3>
+<div class="container user-search">
+	<form class="user-form">
+		<span class="title">USERS</span>
+		<input placeholder="Search" ng-model="query">
+	</form>
 
-<div class="col-md-2">
-  Search: <input ng-model="query">
-</div>
-
-<div class="users" ng-controller="UserSearchCtrl" ng-repeat="user in users | filter:query">
-	<a href="#/user/{{user.uid}}">
-	  <img ng-src="{{user.photo}}"></img>
-	  <span>{{user.name}}</span> 
-	</a>
+	<div class="users" ng-controller="UserSearchCtrl" ng-repeat="user in users | filter:query">
+		<a href="#/user/{{user.uid}}">
+		  <img ng-src="{{user.photo}}"></img>
+		  <span class="username">{{user.name}}</span> 
+		</a>
+	</div>
 </div>

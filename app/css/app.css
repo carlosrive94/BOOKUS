@@ -90,11 +90,6 @@
   margin-left: 0.5em;
 }
 
-.users img{
-	height: 100px;
-	width: 100px;
-}
-
 .user-detail .user-info{
 	margin-bottom: 25px;
 	text-align: center;
@@ -109,4 +104,28 @@
 	margin-left: 0.5em;
 	font-family: 'MuseoSans_xFat';
 	font-size: 30px;
+}
+
+.user-search .user-form{
+	margin-bottom: 25px;
+}
+
+.user-search .title{
+	font-family: 'MuseoSans_xFat';
+	font-size: 30px;
+	margin-right: 0.5em;
+}
+
+.user-search .users{
+	margin-bottom: 10px;
+}
+
+.user-search .users .username{
+	margin-left: 5px;
+	font-size: 20px;
+}
+
+.users img{
+	height: 100px;
+	width: 100px;
 }
