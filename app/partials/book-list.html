@@ -3,8 +3,11 @@
 		<p class="catTitle"><a href="#/category/Newest">Newest</a></p>
 		<div class="col-sm-3" ng-repeat="book in newBooks">
 			<a href="#/books/{{book.id}}" class="thumb">
-			<img ng-src="{{book.image}}" class="img-responsive" alt="{{book.name}}"></a>
-			<a href="#/books/{{book.id}}">{{book.title}}</a>
+				<div class="imgContainer">
+					<img ng-src="{{book.image}}" class="img-responsive" alt="{{book.name}}">
+				</div>
+				{{book.title}}
+			</a>
 			<p>{{book.author}}</p>
 			<div ng-controller="AuthCtrl" ng-show="currentUser">
 				<a href="#" ng-click="addBookRead(book.id)" class="btn btn-info">Read</a>
@@ -17,8 +20,11 @@
 		<p class="catTitle"><a href="#/category/Comedy">Comedy</a></p>
 		<div class="col-sm-3" ng-repeat="book in comedyBooks">
 			<a href="#/books/{{book.id}}" class="thumb">
-			<img ng-src="{{book.image}}" class="img-responsive" alt="{{book.name}}"></a>
-			<a href="#/books/{{book.id}}">{{book.title}}</a>
+				<div class="imgContainer">
+					<img ng-src="{{book.image}}" class="img-responsive" alt="{{book.name}}"></a>
+				</div>
+				{{book.title}}
+			</a>
 			<p>{{book.author}}</p>
 			<div ng-controller="AuthCtrl" ng-show="currentUser">
 				<a href="#" ng-click="addBookRead(book.id)" class="btn btn-info">Read</a>
@@ -31,8 +37,11 @@
 		<p class="catTitle"><a href="#/category/Drama">Drama</a></p>
 		<div class="col-sm-3" ng-repeat="book in dramaBooks">
 			<a href="#/books/{{book.id}}" class="thumb">
-			<img ng-src="{{book.image}}" class="img-responsive" alt="{{book.name}}"></a>
-			<a href="#/books/{{book.id}}">{{book.title}}</a>
+				<div class="imgContainer">
+					<img ng-src="{{book.image}}" class="img-responsive" alt="{{book.name}}"></a>
+				</div>
+				{{book.title}}
+			</a>
 			<p>{{book.author}}</p>
 			<div ng-controller="AuthCtrl" ng-show="currentUser">
 				<a href="#" ng-click="addBookRead(book.id)" class="btn btn-info">Read</a>
@@ -45,8 +54,11 @@
 		<p class="catTitle"><a href="#/category/Fiction">Fiction</a></p>
 		<div class="col-sm-3" ng-repeat="book in fictionBooks">
 			<a href="#/books/{{book.id}}" class="thumb">
-			<img ng-src="{{book.image}}" class="img-responsive" alt="{{book.name}}"></a>
-			<a href="#/books/{{book.id}}">{{book.title}}</a>
+				<div class="imgContainer">
+					<img ng-src="{{book.image}}" class="img-responsive" alt="{{book.name}}"></a>
+				</div>
+				{{book.title}}
+			</a>
 			<p>{{book.author}}</p>
 			<div ng-controller="AuthCtrl" ng-show="currentUser">
 				<a href="#" ng-click="addBookRead(book.id)" class="btn btn-info">Read</a>
