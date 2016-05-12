@@ -73,3 +73,17 @@ bookusControllers.controller('BookDetailCtrl', ['$scope', '$routeParams', '$http
 			document.getElementById("bookDescription").innerHTML = $scope.book.description;
 		});
 }]);
+
+bookusControllers.controller('BookSearchCtrl', ['$scope', '$http', '$location',
+  function($scope, $http, $location) {  
+	$scope.search = function(book){
+		$scope.books = [];
+		$http.get('https://www.googleapis.com/books/v1/volumes?q=' + book + '&orderBy=relevance&maxResults=4&key='+APIKey).
+		  success(function(data){
+			angular.forEach(data.items , function(rawBook){
+					$scope.books.push(getBook(rawBook));
+				});
+			$location.path( '/books/'+$scope.books[0].id ); //TODO
+		  });
+	};
+}]);

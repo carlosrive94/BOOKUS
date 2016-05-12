@@ -54,10 +54,10 @@
 				<!-- Search -->
 				<div class="col-sm-3 col-md-4">
 					<form class="navbar-form" role="search">
-						<div class="input-group">
-							<input placeholder="Search" class="form-control">
+						<div class="input-group" ng-controller="BookSearchCtrl">
+							<input placeholder="Search" ng-model="book" class="form-control">
 							<div class="input-group-btn">
-								<button type="submit" class="btn"><i class="glyphicon glyphicon-search"></i></button>
+								<button type="submit" ng-click="search(book)" class="btn"><i class="glyphicon glyphicon-search"></i></button>
 							</div>
 						</div>
 					</form>
