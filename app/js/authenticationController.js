@@ -67,21 +67,20 @@ bookusControllers.controller('AuthCtrl', ['$scope', '$firebaseAuth' , '$firebase
 	};
 	
 	$scope.addBookRead = function(idBook){
-		if (document.getElementById(idBook).innerHTML == 'Read'){
-        	document.getElementById(idBook).innerHTML = "UnRead";
-        	document.getElementById(idBook).className = "unread";
-
+		if (document.getElementById(idBook + 'R').innerHTML == 'Read'){
+        	document.getElementById(idBook + 'R').innerHTML = "Unread";
+        	document.getElementById(idBook + 'R').className = "btn btn-danger";
+        	document.getElementById(idBook + 'W').className = "btn btn-info disabled";
         	$scope.booksReadRef.child(idBook).set({
 				id: idBook
 			});
         }
         else{
-        	document.getElementById(idBook).className = "fa fa-heart-o";
-        	$scope.booksLikedRef.child(idBook).remove();
+        	document.getElementById(idBook + 'R').innerHTML = "Read";
+        	document.getElementById(idBook + 'R').className = "btn btn-info";
+        	document.getElementById(idBook + 'W').className = "btn btn-info";
+        	$scope.booksReadRef.child(idBook).remove();
         }
-		$scope.booksRead.$add({
-			id: idBook
-		});
 	};
 	
 	$scope.addBookWant = function(idBook){
