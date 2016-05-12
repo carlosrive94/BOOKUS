@@ -94,3 +94,19 @@
 	height: 100px;
 	width: 100px;
 }
+
+.user-detail .user-info{
+	margin-bottom: 25px;
+	text-align: center;
+}
+
+.user-detail .user-photo{
+	height: 100px;
+	width: 100px;
+}
+
+.user-detail .username{
+	margin-left: 0.5em;
+	font-family: 'MuseoSans_xFat';
+	font-size: 30px;
+}
