@@ -52,31 +52,29 @@
 					</form>
 				</div>
 				
-				<ul class="nav navbar-nav navbar-right">
-					<li>
-						<div class="login nav navbar-nav navbar-right" ng-controller="AuthCtrl">
-							<div ng-show="currentUser">
-								<a href="#/user/{{currentUser.uid}}">
-								  <img ng-src="{{currentUser.photo}}"></img>
-								  {{currentUser.name}} 
-								</a>
-								<a href="#" ng-click="logout()" class="btn btn-danger">Log Out</a>
-							</div>
-							<div>
-								<li ng-controller="AuthCtrl" ng-hide="currentUser">
-								  <a href="" data-toggle="modal" data-target="#loginModal">
-									<span class="glyphicon glyphicon-lock"></span> Log in
-								  </a>
-								</li>
-								<li ng-controller="AuthCtrl" ng-hide="currentUser">
-								  <a href="" data-toggle="modal" data-target="#signUpModal">
-									<span class="glyphicon glyphicon-user"></span> Sign Up
-								  </a>
-								</li>
-							</div>
-						</div>
-					</li>
-				</ul>
+				
+				<div class="login nav navbar-nav navbar-right" ng-controller="AuthCtrl">
+					<div ng-show="currentUser">
+						<a href="#/user/{{currentUser.uid}}">
+						  <img ng-src="{{currentUser.photo}}"></img>
+						  {{currentUser.name}} 
+						</a>
+						<a href="#" ng-click="logout()" class="btn btn-danger">Log Out</a>
+					</div>
+					<ul class="nav navbar-nav" ng-controller="AuthCtrl" ng-hide="currentUser">
+						<li>
+						  <a href="" data-toggle="modal" data-target="#loginModal">
+							<span class="glyphicon glyphicon-lock"></span> Log in
+						  </a>
+						</li>
+						<li>
+						  <a href="" data-toggle="modal" data-target="#signUpModal">
+							<span class="glyphicon glyphicon-user"></span> Sign Up
+						  </a> 
+						</li>
+					</ul>
+				</div>
+
 			</div>
 		</div>
 	</nav>
