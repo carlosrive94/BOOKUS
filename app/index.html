@@ -56,9 +56,9 @@
 				<div class="col-sm-3 col-md-4">
 					<form class="navbar-form" role="search">
 						<div class="input-group" ng-controller="BookSearchCtrl">
-							<input placeholder="Search" ng-model="book" class="form-control">
+							<input placeholder="Search" ng-model="book" class="form-control" onkeypressed="handle(event)" id="textSearch">
 							<div class="input-group-btn">
-								<button type="submit" ng-click="search(book)" class="btn"><i class="glyphicon glyphicon-search"></i></button>
+								<button type="submit" ng-click="search(book)" class="btn"><i class="glyphicon glyphicon-search" id="buttonSearch"></i></button>
 							</div>
 						</div>
 					</form>
