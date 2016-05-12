@@ -22,6 +22,7 @@ bookusControllers.controller('AuthCtrl', ['$scope', '$firebaseAuth' , '$firebase
 			$scope.currentUser = $firebaseObject(ref.child(authData.uid));
 			$scope.booksRead = $firebaseArray(ref.child(authData.uid).child("read"));
 			$scope.booksWanted = $firebaseArray(ref.child(authData.uid).child("want"));
+			$scope.booksLikedRef = ref.child(authData.uid).child("liked");
 		}
 	});
 	
@@ -76,4 +77,18 @@ bookusControllers.controller('AuthCtrl', ['$scope', '$firebaseAuth' , '$firebase
 			id: idBook
 		});
 	};
+
+	$scope.addBookLiked = function(idBook){
+		if (document.getElementById(idBook).className == 'fa fa-heart-o'){
+        	document.getElementById(idBook).className = "fa fa-heart";
+        	$scope.booksLikedRef.child(idBook).set({
+				id: idBook
+			});
+        }
+        else{
+        	document.getElementById(idBook).className = "fa fa-heart-o";
+        	$scope.booksLikedRef.child(idBook).remove();
+        }
+	};
+
 }]);
