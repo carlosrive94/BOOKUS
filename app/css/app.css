@@ -58,3 +58,18 @@
 	margin-right: -50%;
 	transform: translate(-50%, -50%);
 }
+
+.bookTitle{
+  padding-top: 0.5em;
+  white-space: nowrap;
+  width: 80%; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bookAuthor{
+  white-space: nowrap;
+  width: 80%; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
