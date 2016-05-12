@@ -69,28 +69,28 @@ bookusControllers.controller('AuthCtrl', ['$scope', '$firebaseAuth' , '$firebase
 	$scope.addBookRead = function(idBook){
 		if (document.getElementById(idBook + 'R').innerHTML == 'Read'){
         	document.getElementById(idBook + 'R').innerHTML = "Unread";
-        	document.getElementById(idBook + 'R').className = "btn btn-danger";
-        	document.getElementById(idBook + 'W').className = "btn btn-info disabled";
+        	document.getElementById(idBook + 'R').className = "btn btn-sm btn-danger";
+        	document.getElementById(idBook + 'W').className = "btn btn-sm btn-info disabled";
         	$scope.booksReadRef.child(idBook).set({
 				id: idBook
 			});
 			if (document.getElementById(idBook + 'W').innerHTML == 'Unwanted'){
 				$scope.booksWantedRef.child(idBook).remove();
-				document.getElementById(idBook + 'W').className = "btn btn-info disabled";
+				document.getElementById(idBook + 'W').className = "btn btn-sm btn-info disabled";
 				document.getElementById(idBook + 'W').innerHTML = "Want";
 			}
         }
         else{
         	document.getElementById(idBook + 'R').innerHTML = "Read";
-        	document.getElementById(idBook + 'R').className = "btn btn-info";
-        	document.getElementById(idBook + 'W').className = "btn btn-info";
+        	document.getElementById(idBook + 'R').className = "btn btn-sm btn-info";
+        	document.getElementById(idBook + 'W').className = "btn btn-sm btn-info";
         	$scope.booksReadRef.child(idBook).remove();
         }
 	};
 	
 	$scope.addBookWant = function(idBook){
-		if (document.getElementById(idBook + 'W').className == 'btn btn-info'){
-        	document.getElementById(idBook + 'W').className = "btn btn-danger";
+		if (document.getElementById(idBook + 'W').className == 'btn btn-sm btn-info'){
+        	document.getElementById(idBook + 'W').className = "btn btn-sm btn-danger";
         	document.getElementById(idBook + 'W').innerHTML = "Unwanted";
         	$scope.booksWantedRef.child(idBook).set({
 				id: idBook
@@ -100,23 +100,23 @@ bookusControllers.controller('AuthCtrl', ['$scope', '$firebaseAuth' , '$firebase
 			}
         }
         else{
-        	document.getElementById(idBook + 'W').className = "btn btn-info";
+        	document.getElementById(idBook + 'W').className = "btn btn-sm btn-info";
 			document.getElementById(idBook + 'W').innerHTML = "Want";
 			$scope.booksWantedRef.child(idBook).remove();
         }
 	};
 
 	$scope.addBookLiked = function(idBook){
-		if (document.getElementById(idBook).className == 'fa fa-heart-o'){
-        	document.getElementById(idBook).className = "fa fa-heart";
-        	$scope.booksLikedRef.child(idBook).set({
+		if (document.getElementById(idBook + 'L').className == 'fa fa-heart-o'){
+			document.getElementById(idBook + 'L').className = "fa fa-heart";
+			$scope.booksLikedRef.child(idBook).set({
 				id: idBook
 			});
-        }
-        else{
-        	document.getElementById(idBook).className = "fa fa-heart-o";
-        	$scope.booksLikedRef.child(idBook).remove();
-        }
+		}
+		else{
+			document.getElementById(idBook + 'L').className = "fa fa-heart-o";
+			$scope.booksLikedRef.child(idBook).remove();
+		}
 	};
 
 }]);
