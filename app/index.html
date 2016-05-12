@@ -38,8 +38,20 @@
 					<li id="navMyBooks"><a href="#">My books</a></li>
 					<li id="navCategories"><a href="#/category/newest">Categories</a></li>
 					<li id="navNews"><a href="#">News</a></li>
-					<li><input placeholder="Search..."></li>
 				</ul>
+				
+				<!-- Search -->
+				<div class="col-sm-4 col-md-4">
+					<form class="navbar-form" role="search">
+						<div class="input-group">
+							<input placeholder="Search" class="form-control">
+							<div class="input-group-btn">
+								<button type="submit" class="btn"><i class="glyphicon glyphicon-search"></i></button>
+							</div>
+						</div>
+					</form>
+				</div>
+				
 				<ul class="nav navbar-nav navbar-right">
 					<li>
 						<div class="login nav navbar-nav navbar-right" ng-controller="AuthCtrl">
