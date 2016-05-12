@@ -67,6 +67,18 @@ bookusControllers.controller('AuthCtrl', ['$scope', '$firebaseAuth' , '$firebase
 	};
 	
 	$scope.addBookRead = function(idBook){
+		if (document.getElementById(idBook).innerHTML == 'Read'){
+        	document.getElementById(idBook).innerHTML = "UnRead";
+        	document.getElementById(idBook).className = "unread";
+
+        	$scope.booksReadRef.child(idBook).set({
+				id: idBook
+			});
+        }
+        else{
+        	document.getElementById(idBook).className = "fa fa-heart-o";
+        	$scope.booksLikedRef.child(idBook).remove();
+        }
 		$scope.booksRead.$add({
 			id: idBook
 		});
