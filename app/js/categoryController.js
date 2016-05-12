@@ -19,4 +19,13 @@ bookusControllers.controller('CategoryCtrl', ['$scope', '$routeParams', '$http',
 				$scope.books.push(getBook(rawBook));
 			});
 		});
+
+	$scope.likeBook = function (bookId){
+        if (document.getElementById(bookId).className == 'fa fa-heart-o'){
+        	document.getElementById(bookId).className = "fa fa-heart";
+        }
+        else{
+        	document.getElementById(bookId).className = "fa fa-heart-o";
+        }
+	}
 }]);
