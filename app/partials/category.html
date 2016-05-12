@@ -1,14 +1,18 @@
 <div class="container">
-	<div class="row">
-		<p><a href="#/category/newest">{{category}}</a></p>
+	<div class="row category">
+		<p class="catTitle">{{category}}</p>
 		<div class="col-sm-3" ng-repeat="book in books">
 			<a href="#/books/{{book.id}}" class="thumb">
-			<img ng-src="{{book.image}}" class="img-responsive" alt="{{book.name}}"></a>
-			<a href="#/books/{{book.id}}">{{book.title}}</a>
-			<p>{{book.authors}}</p>
+				<div class="imgContainer">
+					<img ng-src="{{book.image}}" class="img-responsive" alt="{{book.name}}">
+				</div>
+				<p class="bookTitle">{{book.title}}</p>
+			</a>
+			<p class="bookAuthor">{{book.authors}}</p>
 			<div ng-controller="AuthCtrl" ng-show="currentUser">
 				<a href="#" ng-click="addBookRead(book.id)" class="btn btn-info">Read</a>
 				<a href="#" ng-click="addBookWant(book.id)" class="btn btn-info">Want</a>
+				<a href="javascript:;" ng-click="likeBook(book.id)"><i class="fa fa-heart-o" id="{{book.id}}" aria-hidden="true"></i></a>
 			</div>
 		</div>
 	</div>
