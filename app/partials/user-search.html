@@ -4,7 +4,7 @@
 		<input placeholder="Search" ng-model="query">
 	</form>
 
-	<div class="users" ng-controller="UserSearchCtrl" ng-repeat="user in users | filter:query">
+	<div class="users" ng-controller="UserSearchCtrl" ng-repeat="user in users | filter: {name: query}">
 		<a href="#/user/{{user.uid}}">
 		  <img ng-src="{{user.photo}}"></img>
 		  <span class="username">{{user.name}}</span> 
