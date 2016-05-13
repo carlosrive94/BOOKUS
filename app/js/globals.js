@@ -2,7 +2,7 @@
 
 /* Globals */
 
-var test = true; 
+var test = false; 
 
 var APIKey = 'AIzaSyCtNBUQRvEOR-jmYBzg2oZ-H8IuI_pIc4Y';
 
