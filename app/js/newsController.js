@@ -7,7 +7,7 @@ bookusControllers.controller('NewsCtrl', ['$scope',
    changeNav("navNews");
 
 	var feedcontainer=document.getElementById("feeddiv");
-	var feedurl="http://www.fib.upc.edu/fib/rss.rss";
+	var feedurl="https://www.bookbrowse.com/rss/book_news.rss";
 	var feedlimit=8;
 	var rssoutput="<b>Latest News:</b><br /><ul>";
 
@@ -22,6 +22,7 @@ bookusControllers.controller('NewsCtrl', ['$scope',
 			var thefeeds=result.feed.entries;
 			for (var i=0; i<thefeeds.length; i++){
 				rssoutput+="<li><a href='" + thefeeds[i].link + "'>" + thefeeds[i].title + "</a></li>";
+				rssoutput+="<p>" + thefeeds[i].content + "</p>";
 				rssoutput+="</ul>";
 				feedcontainer.innerHTML=rssoutput;
 			}
