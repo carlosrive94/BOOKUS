@@ -1,19 +1,36 @@
-<img ng-src="{{book.image}}">
-
-<h1>{{book.title}}</h1> 
-
-<!-- FB Share Button -->
-<div class="fb-share-button" data-href="https://bookus.herokuapp.com/#/books/{{book.id}}" data-layout="button_count" data-mobile-iframe="true"></div>
-
-<p id="bookDescription">description</p>
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav hidden-xs">
+      <img ng-src="{{book.image}}">
+    </div>
+    <br>
+    
+    <div class="col-sm-9">
+      <div class="well">
+        <h1>{{book.title}}</h1> 
+        <p>{{book.authors}}, {{book.publishedDate}}</p>
+        <!-- FB Share Button -->
+		<div class="fb-share-button" data-href="https://bookus.herokuapp.com/#/books/{{book.id}}" data-layout="button_count" data-mobile-iframe="true"></div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="well">
+          	<p id="bookDescription">description</p>
+          </div>
+        </div>
+      </div>
+     
+    </div>
+  </div>
+</div>
 
 <ul>
     <dl>
       <dt>Author</dt>
-      <dd>{{book.authors}}</dd>
+      
 	  
 	  <dt>Published Date</dt>
-      <dd>{{book.publishedDate}}</dd>
+      
 	  
 	  <dt>Number of pages</dt>
       <dd>{{book.pageCount}}</dd>
