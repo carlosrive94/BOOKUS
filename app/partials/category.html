@@ -9,10 +9,10 @@
 				<p class="bookTitle">{{book.title}}</p>
 			</a>
 			<p class="bookAuthor">{{book.authors}}</p>
-			<div ng-controller="AuthCtrl" ng-show="currentUser">
-				<a href="#" ng-click="addBookRead(book.id)" class="btn btn-sm btn-info">Read</a>
-				<a href="#" ng-click="addBookWant(book.id)" class="btn btn-sm btn-info">Want</a>
-				<a href="javascript:;" ng-click="likeBook(book.id)"><i class="fa fa-heart-o" id="{{book.id}}" aria-hidden="true"></i></a>
+			<div ng-controller="AuthCtrl" ng-show="currentUser" ng-init="checkProperties('cat',book.id)">
+				<a href="javascript:;" ng-click="addBookRead('cat', book.id)" id="cat{{book.id}}R">Read</a>
+				<a href="javascript:;" ng-click="addBookWant('cat', book.id)" id="cat{{book.id}}W">Want</a>
+				<a href="javascript:;" ng-click="addBookLiked('cat', book.id)"><i id="cat{{book.id}}L" aria-hidden="true"></i></a>
 			</div>
 		</div>
 	</div>

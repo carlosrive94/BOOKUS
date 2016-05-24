@@ -66,87 +66,88 @@ bookusControllers.controller('AuthCtrl', ['$scope', '$firebaseAuth' , '$firebase
 		location.reload();
 	};
 	
-	$scope.addBookRead = function(idBook){
-		if (document.getElementById(idBook + 'R').innerHTML == 'Read'){
-        	document.getElementById(idBook + 'R').innerHTML = "Unread";
-        	document.getElementById(idBook + 'R').className = "btn btn-sm btn-danger";
-        	document.getElementById(idBook + 'W').className = "btn btn-sm btn-info disabled";
+	$scope.addBookRead = function(category, idBook){
+		if (document.getElementById(category + idBook + 'R').innerHTML == 'Read'){
+        	document.getElementById(category + idBook + 'R').innerHTML = "Unread";
+        	document.getElementById(category + idBook + 'R').className = "btn btn-sm btn-danger";
+        	document.getElementById(category + idBook + 'W').className = "btn btn-sm btn-info disabled";
         	$scope.booksReadRef.child(idBook).set({
 				id: idBook
 			});
-			if (document.getElementById(idBook + 'W').innerHTML == 'Unwanted'){
+			if (document.getElementById(category + idBook + 'W').innerHTML == 'Unwanted'){
 				$scope.booksWantedRef.child(idBook).remove();
-				document.getElementById(idBook + 'W').className = "btn btn-sm btn-info disabled";
-				document.getElementById(idBook + 'W').innerHTML = "Want";
+				document.getElementById(category + idBook + 'W').className = "btn btn-sm btn-info disabled";
+				document.getElementById(category + idBook + 'W').innerHTML = "Want";
 			}
         }
         else{
-        	document.getElementById(idBook + 'R').innerHTML = "Read";
-        	document.getElementById(idBook + 'R').className = "btn btn-sm btn-info";
-        	document.getElementById(idBook + 'W').className = "btn btn-sm btn-info";
+        	document.getElementById(category + idBook + 'R').innerHTML = "Read";
+        	document.getElementById(category + idBook + 'R').className = "btn btn-sm btn-info";
+        	document.getElementById(category + idBook + 'W').className = "btn btn-sm btn-info";
         	$scope.booksReadRef.child(idBook).remove();
         }
 	};
 	
 	$scope.addBookWant = function(idBook){
-		if (document.getElementById(idBook + 'W').className == 'btn btn-sm btn-info'){
-        	document.getElementById(idBook + 'W').className = "btn btn-sm btn-danger";
-        	document.getElementById(idBook + 'W').innerHTML = "Unwanted";
+		if (document.getElementById(category + idBook + 'W').className == 'btn btn-sm btn-info'){
+        	document.getElementById(category + idBook + 'W').className = "btn btn-sm btn-danger";
+        	document.getElementById(category + idBook + 'W').innerHTML = "Unwanted";
         	$scope.booksWantedRef.child(idBook).set({
 				id: idBook
 			});
-			if (document.getElementById(idBook + 'R').className == 'Read'){
+			if (document.getElementById(category + idBook + 'R').className == 'Read'){
 				
 			}
         }
         else{
-        	document.getElementById(idBook + 'W').className = "btn btn-sm btn-info";
-			document.getElementById(idBook + 'W').innerHTML = "Want";
+        	document.getElementById(category + idBook + 'W').className = "btn btn-sm btn-info";
+			document.getElementById(category + idBook + 'W').innerHTML = "Want";
 			$scope.booksWantedRef.child(idBook).remove();
         }
 	};
 
 	$scope.addBookLiked = function(idBook){
-		if (document.getElementById(idBook + 'L').className == 'fa fa-heart-o'){
-			document.getElementById(idBook + 'L').className = "fa fa-heart";
+		if (document.getElementById(category + idBook + 'L').className == 'fa fa-heart-o'){
+			document.getElementById(category + idBook + 'L').className = "fa fa-heart";
 			$scope.booksLikedRef.child(idBook).set({
 				id: idBook
 			});
 		}
 		else{
-			document.getElementById(idBook + 'L').className = "fa fa-heart-o";
+			document.getElementById(category + idBook + 'L').className = "fa fa-heart-o";
 			$scope.booksLikedRef.child(idBook).remove();
 		}
 	};
 	
-	$scope.checkProperties = function(idBook){
+	$scope.checkProperties = function(category,idBook){
 		$scope.booksReadRef.child(idBook).once('value', function(snapshot){
 			if (snapshot.exists()) {
-				document.getElementById(idBook + 'R').className = "btn btn-sm btn-danger";
-				document.getElementById(idBook + 'R').innerHTML = "Unread";
+				document.getElementById(category + idBook + 'R').className = "btn btn-sm btn-danger";
+				document.getElementById(category + idBook + 'R').innerHTML = "Unread";
 			}
 			else{
-				document.getElementById(idBook + 'R').className = "btn btn-sm btn-info";
-				document.getElementById(idBook + 'R').innerHTML = "Read";
+				document.getElementById(category + idBook + 'R').className = "btn btn-sm btn-info";
+				document.getElementById(category + idBook + 'R').innerHTML = "Read";
 			}
 		});
 		
+		
 		$scope.booksWantedRef.child(idBook).once('value', function(snapshot){
 			if (snapshot.exists()) {
-				document.getElementById(idBook + 'W').className = "btn btn-sm btn-danger";
-				document.getElementById(idBook + 'W').innerHTML = "Unwanted";
+				document.getElementById(category + idBook + 'W').className = "btn btn-sm btn-danger";
+				document.getElementById(category + idBook + 'W').innerHTML = "Unwanted";
 			}
 			else{
-				document.getElementById(idBook + 'W').className = "btn btn-sm btn-info";
-				document.getElementById(idBook + 'W').innerHTML = "Wanted";
+				document.getElementById(category + idBook + 'W').className = "btn btn-sm btn-info";
+				document.getElementById(category + idBook + 'W').innerHTML = "Wanted";
 			}
 		});
 		
 		$scope.booksLikedRef.child(idBook).once('value', function(snapshot){
 			if (snapshot.exists())
-				document.getElementById(idBook + 'L').className = 'fa fa-heart';
+				document.getElementById(category + idBook + 'L').className = 'fa fa-heart';
 			else
-				document.getElementById(idBook + 'L').className = "fa fa-heart-o";
+				document.getElementById(category + idBook + 'L').className = "fa fa-heart-o";
 		});
 	}
 

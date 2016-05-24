@@ -35,3 +35,10 @@ function getBook(rawBook){
 		pageCount: rawBook.volumeInfo.pageCount
 	}
 }
+
+/* Search with intro */
+$("#textSearch").keyup(function(event){
+    if(event.keyCode == 13){
+        $("#buttonSearch").click();
+    }
+});
