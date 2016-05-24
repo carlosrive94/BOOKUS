@@ -129,7 +129,13 @@
 	height: 100px;
 	width: 100px;
 }
+
 footer.container-fluid{
   background-color: #222222;
   color: #999;
+}
+
+.imgBook img{
+	width: 50%;
+	padding-top: 5%;
 }
