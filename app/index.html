@@ -38,7 +38,12 @@
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav">
 					<li id="navHome"><a href="#">Home</a></li>
-					<li id="navMyBooks"><a href="#/user/{{currentUser.uid}}">My books</a></li>
+					
+					<li id="navMyBooks">
+						<a ng-show="currentUser" href="#/user/{{currentUser.uid}}">My books</a>
+						<a ng-hide="currentUser" href="" data-toggle="modal" data-target="#signUpModal">My books</a>
+					</li>
+					
 					<li id="navCategories" class="dropdown">
 					  <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categories <span class="caret"></span></a>
 					  <ul class="dropdown-menu">
