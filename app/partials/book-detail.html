@@ -8,7 +8,7 @@
     <div class="col-sm-9">
       <div class="well">
         <h1>{{book.title}}</h1> 
-        <p>{{book.authors}}, {{book.publishedDate}}</p>
+        <p>{{book.authors}}</p>
         <!-- FB Share Button -->
 		<div class="fb-share-button" data-href="https://bookus.herokuapp.com/#/books/{{book.id}}" data-layout="button_count" data-mobile-iframe="true"></div>
       </div>
@@ -20,24 +20,20 @@
         </div>
       </div>
      
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="well">
+    		<p><b>Number of pages:</b> {{book.pageCount}}</p>
+    		<p><b>Published Date:</b> {{book.publishedDate}}</p>
+          	<p ng-show="book.averageRating"><b>Rating:</b> {{book.averageRating}} // voted {{book.ratingsCount}} times</p>
+	  		<p ng-hide="book.averageRating"><b>Rating:</b> Not voted yet</p>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
-
-<ul>
-    <dl>
-      <dt>Author</dt>
       
 	  
-	  <dt>Published Date</dt>
-      
 	  
-	  <dt>Number of pages</dt>
-      <dd>{{book.pageCount}}</dd>
-	  
-	  <dt>Rating</dt>
-      <dd ng-show="book.averageRating">{{book.averageRating}} // voted {{book.ratingsCount}} times</dd>
-	  <dd ng-hide="book.averageRating">Not voted yet</dd>
-
-    </dl>
-</ul>
