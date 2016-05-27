@@ -2,11 +2,13 @@
 
 /* Globals */
 
-var test = true; 
+var test = true; //To access or not to access to Google Books API
 
 var APIKey = 'AIzaSyCtNBUQRvEOR-jmYBzg2oZ-H8IuI_pIc4Y';
 
 var bookusControllers = angular.module('bookusControllers', ["firebase"]);
+
+var reload = false; //Reload the page to show the buttons (should be another way to do it)
 
 function changeNav(currentNav){
 	var title = "Bookus"
@@ -29,6 +31,15 @@ function changeNav(currentNav){
 	document.getElementById("navUsers").className = "";
 	document.getElementById("navNews").className = "";
 	document.getElementById(currentNav).className = "active";
+	
+	//Reload the page to show the buttons (should be another way to do it)
+	if(currentNav == "navHome" || currentNav == "navCategories"){
+		if(reload){
+			location.reload();
+			reload = false;
+		}
+		else reload = true;
+	}
 }
 
 function getBook(rawBook){
