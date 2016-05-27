@@ -4,10 +4,24 @@
 		<input placeholder="Search" ng-model="query">
 	</form>
 
-	<div class="users" ng-controller="UserSearchCtrl" ng-repeat="user in users | filter: {name: query}">
-		<a href="#/user/{{user.uid}}">
-		  <img ng-src="{{user.photo}}"></img>
-		  <span class="username">{{user.name}}</span> 
-		</a>
+	<div class="users container" ng-controller="UserSearchCtrl" ng-repeat="user in users | filter: {name: query}" ng-class-odd="'alt'">
+		<div class="row" id="userList">
+		    <table class="table-responsive">
+			    <thead>
+			      <tr>
+			        <th class="col-xs-1"></th> 
+			        <th class="col-xs-2">Name</th>
+			        <th class="col-xs-1"></th>
+			      </tr>
+			    </thead>
+			    <tbody>
+				<tr ng-class-odd="'alt'">
+			        <td class="col-xs-1"><img title="{{user.name}}" src="{{user.photo}}" class="img-thumbnail img-responsive img-circle"></td> 
+			        <a href="#/user/{{user.uid}}"><td class="col-xs-2 cap">{{user.name}}</td></a>
+			      </tr>
+		</div>
+		    	</tbody>
+	    	</table>
+	  </div>
 	</div>
-</div>
+</div><!--/container-->
