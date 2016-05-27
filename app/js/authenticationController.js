@@ -88,7 +88,7 @@ bookusControllers.controller('AuthCtrl', ['$scope', '$firebaseAuth' , '$firebase
         }
 	};
 	
-	$scope.addBookWant = function(idBook){
+	$scope.addBookWant = function(category, idBook){
 		if (document.getElementById(category + idBook + 'W').className == 'btn btn-sm btn-info'){
         	document.getElementById(category + idBook + 'W').className = "btn btn-sm btn-danger";
         	document.getElementById(category + idBook + 'W').innerHTML = "Unwanted";
@@ -106,7 +106,7 @@ bookusControllers.controller('AuthCtrl', ['$scope', '$firebaseAuth' , '$firebase
         }
 	};
 
-	$scope.addBookLiked = function(idBook){
+	$scope.addBookLiked = function(category, idBook){
 		if (document.getElementById(category + idBook + 'L').className == 'fa fa-heart-o'){
 			document.getElementById(category + idBook + 'L').className = "fa fa-heart";
 			$scope.booksLikedRef.child(idBook).set({
