@@ -1,3 +1,9 @@
+html, body{
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
 .login img{
 	height: 45px;
 	width: 45px;
@@ -39,7 +45,7 @@
   border-bottom-right-radius: 2em; 
   border-top-left-radius: 2em;
   background-color: #EEEEEE;
-  margin-bottom: 2em;
+  margin-bottom: 3em;
   padding-bottom: 2em;
 }
 
@@ -144,9 +150,13 @@
 	width: 100px;
 }
 
-footer.container-fluid{
+.footer.container-fluid{
   background-color: #222222;
   color: #999;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin-top: 15px;
 }
 
 .imgBook img{
@@ -165,4 +175,9 @@ footer.container-fluid{
 	left: 50%;
 	margin-right: -50%;
 	transform: translate(-50%, -50%);
+}
+
+#wrapper{
+	min-height:100%;
+	position:relative;
 }
