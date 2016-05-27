@@ -4,9 +4,9 @@
 		<input placeholder="Search" ng-model="query">
 	</form>
 	<div ng-controller="UserSearchCtrl" ng-repeat="user in users | filter: {name: query}">
-			<div class="col-sm-3 user-detail" ng-class-odd="'alt'">
-				<img title="{{user.name}}" ng-src="{{user.photo}}" class="img-thumbnail img-responsive img-circle user-photo">
-			        <div><a href="#/user/{{user.uid}}"><p class="namePhoto">{{user.name}}</p></a></div>
+			<div class="col-sm-3 user-detail perfil" ng-class-odd="'alt'">
+				<a href="#/user/{{user.uid}}"><img title="{{user.name}}" ng-src="{{user.photo}}" class="img-thumbnail img-responsive img-circle user-photo-detail">
+			        <div><p class="namePhoto">{{user.name}}</p></a></div>
 			</div>
 	</div>
 </div><!--/container-->
