@@ -2,7 +2,7 @@
 
 /* Globals */
 
-var test = true; //To access or not to access to Google Books API
+var test = false; //To access or not to access to Google Books API
 
 var APIKey = 'AIzaSyCtNBUQRvEOR-jmYBzg2oZ-H8IuI_pIc4Y';
 
@@ -44,10 +44,12 @@ function changeNav(currentNav){
 
 function getBook(rawBook){
 	var authors = "";
-	for (var i=0; i < rawBook.volumeInfo.authors.length; ++i){
-		authors += rawBook.volumeInfo.authors[i];
-		if(i != rawBook.volumeInfo.authors.length-1) authors += ", ";
-	};
+	if(rawBook.volumeInfo.authors != null){ //If there are no authors
+		for (var i=0; i < rawBook.volumeInfo.authors.length; ++i){
+			authors += rawBook.volumeInfo.authors[i];
+			if(i != rawBook.volumeInfo.authors.length-1) authors += ", ";
+		}
+	}
 	return {
 		id: rawBook.id,
 		title: rawBook.volumeInfo.title,

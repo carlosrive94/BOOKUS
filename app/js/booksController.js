@@ -48,12 +48,12 @@ bookusControllers.controller('BookSearchCtrl', ['$scope', '$http', '$location',
 		if(test) url = 'jsonExamples/book-list.json';
 		else url = 'https://www.googleapis.com/books/v1/volumes?q=' + book + '&orderBy=relevance&maxResults=4&key='+APIKey;
 		$scope.books = [];
-		$http.get(url).
-		  success(function(data){
+		$http.get(url).success(function(data){
 			angular.forEach(data.items , function(rawBook){
 					$scope.books.push(getBook(rawBook));
 				});
-			$location.path( '/books/'+$scope.books[0].id ); //TODO
-		  });
+			if($scope.books.length != 0) $location.path( '/books/'+$scope.books[0].id ); //TODO
+			else alert("Any Books found");
+		});
 	};
 }]);
