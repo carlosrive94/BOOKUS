@@ -37,12 +37,13 @@ bookusControllers.controller('BookDetailCtrl', ['$scope', '$routeParams', '$http
 		success(function(data){
 			$scope.book = getBook(data);
 			document.getElementById("bookDescription").innerHTML = $scope.book.description;
+			document.title += " - " + $scope.book.title;
 		});
 }]);
 
 bookusControllers.controller('BookSearchCtrl', ['$scope', '$http', '$location',
   function($scope, $http, $location) {  
-	$scope.search = function(book){
+	$scope.search = function(book){ 
 		var url;
 		if(test) url = 'jsonExamples/book-list.json';
 		else url = 'https://www.googleapis.com/books/v1/volumes?q=' + book + '&orderBy=relevance&maxResults=4&key='+APIKey;

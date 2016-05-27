@@ -11,7 +11,7 @@
 			<input ng-model="queryRead" placeholder="Search">
 		</form>
 		<div class="col-sm-3"  ng-repeat="book in booksRead | filter:queryRead" class="thumbnail">
-			<a href="javascript:;/books/{{book.id}}" class="thumb">
+			<a href="#/books/{{book.id}}" class="thumb">
 				<div class="imgContainer">
 					<img ng-src="{{book.image}}" class="img-responsive" alt="{{book.name}}">
 				</div>
@@ -34,7 +34,7 @@
 			<input ng-model="queryWanted" placeholder="Search">
 		</form>
 		<div class="col-sm-3" ng-repeat="book in booksWanted | filter:queryWanted" class="thumbnail">
-			<a href="javascript:;/books/{{book.id}}" class="thumb">
+			<a href="#/books/{{book.id}}" class="thumb">
 				<div class="imgContainer">
 					<img ng-src="{{book.image}}" class="img-responsive" alt="{{book.name}}">
 				</div>
@@ -57,7 +57,7 @@
 			<input ng-model="queryLiked" placeholder="Search">
 		</form>
 		<div class="col-sm-3" ng-repeat="book in booksLiked | filter:queryLiked" class="thumbnail">
-			<a href="javascript:;/books/{{book.id}}" class="thumb">
+			<a href="#/books/{{book.id}}" class="thumb">
 				<div class="imgContainer">
 					<img ng-src="{{book.image}}" class="img-responsive" alt="{{book.name}}">
 				</div>
