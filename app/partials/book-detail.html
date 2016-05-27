@@ -10,9 +10,14 @@
       <div class="well">
         <h1>{{book.title}}</h1> 
         <p>{{book.authors}}</p>
-        <!-- FB Share Button -->
-		<div class="fb-share-button" data-href="https://bookus.herokuapp.com/#/books/{{book.id}}" data-layout="button_count" data-mobile-iframe="true"></div>
-      </div>
+		
+	  <!-- Share buttons -->
+	  <div fb-like="myModel.Url"></div>
+	  <div google-plus="myModel.Url"></div>
+	  <div tweet="myModel.Name" tweet-url="myModel.Url"></div>
+	  <div pin-it="myModel.Name" pin-it-image="myModel.ImageUrl"></div>
+	  
+	  </div>
       <div class="row">
         <div class="col-sm-12">
           <div class="well">

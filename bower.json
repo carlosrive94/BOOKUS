@@ -13,6 +13,7 @@
     "angular-route": "1.4.x",
 	"bootstrap-social": "5.0.0",
 	"firebase": "2.2.4",
-	"angularfire": "1.2.0"
+	"angularfire": "1.2.0",
+	"angulike": "1.2.0"
   }
 }

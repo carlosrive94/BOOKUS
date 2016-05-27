@@ -4,8 +4,15 @@
 
 var bookusApp = angular.module('bookusApp', [
   'ngRoute',
-  'bookusControllers'
-]);
+  'bookusControllers',
+  'angulike'
+]).run([
+      '$rootScope', function ($rootScope) {
+          $rootScope.facebookAppId = '[180915725635406]'; //Facebook page
+      }
+  ]);
+
+
 
 bookusApp.config(['$routeProvider',
   function($routeProvider) {
