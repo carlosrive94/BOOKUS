@@ -23,12 +23,25 @@ Bookus is a social network about **books**. You can make lists about the books y
 
 ----------
 
-To install node_modules
+### Install Dependencies
+
+Preconfigured `npm` to automatically run `bower` so we can simply do:
 
     npm install
-To run
+
+This will also call `bower install`.  You should find that you have two new
+folders in your project.
+
+* `node_modules` - contains the npm packages for the tools we need
+* `app/bower_components` - contains the angular framework files
+
+### Run the Application
+
+Simply do
 
     npm start
+
+Now browse to the app at `http://localhost:8080/`.
 
 ----------
 
