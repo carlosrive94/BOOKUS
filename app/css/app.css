@@ -181,3 +181,26 @@ html, body{
 	min-height:100%;
 	position:relative;
 }
+
+.social{
+	margin-top: 10px;
+}
+
+.social div{
+	display: inline;
+	position: relative;
+}
+
+.social .google{
+	top: 4px;
+}
+
+.social .twt{
+	top: 4px;
+	left: -29px;
+}
+
+.social .pin{
+	top: 4px;
+	left: -25px;
+}
