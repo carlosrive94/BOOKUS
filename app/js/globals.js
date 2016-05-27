@@ -9,6 +9,20 @@ var APIKey = 'AIzaSyCtNBUQRvEOR-jmYBzg2oZ-H8IuI_pIc4Y';
 var bookusControllers = angular.module('bookusControllers', ["firebase"]);
 
 function changeNav(currentNav){
+	var title = "Bookus"
+	switch(currentNav){
+		case 'navCategories':
+			title += " - Categories";
+			break;
+		case 'navUsers':
+			title += " - Users";
+			break;
+		case 'navNews':
+			title += " - News";
+			break;
+	}
+	document.title = title;
+	
 	document.getElementById("navHome").className = "";
 	document.getElementById("navMyBooks").className = "";
 	document.getElementById("navCategories").className = "";

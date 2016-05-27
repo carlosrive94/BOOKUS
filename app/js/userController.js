@@ -8,6 +8,11 @@ bookusControllers.controller('UserCtrl', ['$scope', '$routeParams', '$firebaseOb
 	var ref = new Firebase("https://bookus.firebaseio.com/");
 	$scope.user = $firebaseObject(ref.child("users").child($routeParams.userId));
 	
+	$scope.user.$loaded()
+		.then(function(){
+			document.title += " - " + $scope.user.name;
+		});
+	
 	var idBooksRead = $firebaseArray(ref.child("users").child($routeParams.userId).child("read"));
 	idBooksRead.$loaded()
 		.then(function(){
