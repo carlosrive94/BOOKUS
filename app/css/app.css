@@ -96,12 +96,12 @@ html, body{
   margin-left: 0.5em;
 }
 
-.user-detail{
+.user-detail.perfil{
 	width: 20%;
 	min-height: 180px;
 }
 
-.user-detail img{
+.user-photo-detail{
 	margin: 0;
 	position: absolute;
 	top: 50%;
@@ -115,7 +115,7 @@ html, body{
 	text-align: center;
 }
 
-.user-detail .user-photo{
+.user-detail .user-photo, .user-detail .user-photo-detail{
 	height: 100px;
 	width: 100px;
 }
