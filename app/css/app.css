@@ -90,6 +90,20 @@
   margin-left: 0.5em;
 }
 
+.user-detail{
+	width: 20%;
+	min-height: 180px;
+}
+
+.user-detail img{
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+}
+
 .user-detail .user-info{
 	margin-bottom: 25px;
 	text-align: center;
@@ -138,4 +152,17 @@ footer.container-fluid{
 .imgBook img{
 	width: 50%;
 	padding-top: 5%;
+}
+
+.alt {
+	background-color:#eee;
+}
+
+.namePhoto{
+	margin: 0;
+	position: absolute;
+	bottom: 0%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
 }
