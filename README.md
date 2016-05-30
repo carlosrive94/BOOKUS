@@ -23,6 +23,10 @@ Bookus is a social network about **books**. You can make lists about the books y
 
 ----------
 
+[Screencast](https://www.youtube.com/watch?v=r6AiwUOxZlU)
+
+----------
+
 ### Install Dependencies
 
 Preconfigured `npm` to automatically run `bower` so we can simply do:
