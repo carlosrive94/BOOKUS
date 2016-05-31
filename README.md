@@ -24,6 +24,7 @@ Bookus is a social network about **books**. You can make lists about the books y
 ----------
 
 [Screencast](https://www.youtube.com/watch?v=r6AiwUOxZlU)
+[Heroku](http://bookus.herokuapp.com/#/books)
 
 ----------
 
